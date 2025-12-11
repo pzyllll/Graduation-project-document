@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BridgeU - 低保真原型 V16 (全中文版)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Wireframe / Sketch Style */
+        body {
+            font-family: 'SimHei', 'Microsoft YaHei', 'Courier New', monospace; /* 优先使用中文字体 */
+            background-color: #e5e5e5;
+            padding: 20px;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .browser-window {
+            background-color: white;
+            border: 3px solid #333;
+            border-radius: 8px;
+            box-shadow: 12px 12px 0px rgba(0,0,0,0.2);
+            height: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .browser-header {
+            border-bottom: 3px solid #333;
+            padding: 10px 16px;
+            background: #f4f4f4;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .traffic-light { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #333; }
+        .url-bar {
+            flex: 1; background: white; border: 2px solid #333; border-radius: 4px;
+            padding: 4px 12px; font-size: 14px; color: #666; margin-left: 16px;
+        }
+        
+        /* Components */
+        .sketch-btn {
+            border: 2px solid #333; background: #fff; transition: all 0.1s;
+            cursor: pointer; font-weight: bold; display: flex; align-items: center;
+            justify-content: center; gap: 6px;
+        }
+        .sketch-btn:hover { background: #f0f0f0; }
+        .sketch-btn:active { transform: translate(2px, 2px); box-shadow: none; }
+        
+        .sketch-card {
+            background-color: white; border: 2px solid #333;
+            box-shadow: 4px 4px 0px rgba(0,0,0,1); transition: all 0.1s;
+        }
+        .sketch-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px rgba(0,0,0,1); }
+        
+        .nav-item {
+            padding: 12px; border-bottom: 2px solid #333; cursor: pointer;
+            transition: background 0.2s; font-size: 14px; display: flex; align-items: center; gap: 8px;
+        }
+        .nav-item:hover { background-color: #f0f0f0; }
+        .nav-item.active { background-color: #333; color: white; }
+        
+        .sketch-input {
+            border: 2px solid #333; background: #fff; padding: 8px;
+            width: 100%; outline: none; font-family: 'SimHei', monospace;
+        }
+        
+        /* Feature Specific Styles */
+        .mandatory-tag {
+            background-color: #fff; border: 2px solid #333; padding: 4px 12px;
+            font-size: 12px; font-weight: bold; cursor: pointer; transition: all 0.2s;
+        }
+        .mandatory-tag:hover { background-color: #f0f0f0; }
+        .mandatory-tag.active { background-color: #333; color: white; box-shadow: 2px 2px 0px rgba(0,0,0,0.5); }
+
+        /* Language Switcher Styles */
+        .lang-switch-btn {
+            border: 2px solid #333; padding: 4px 8px; font-size: 12px; font-weight: bold; cursor: pointer;
+        }
+        .lang-switch-btn.active { background-color: #333; color: white; }
+
+        /* Scrollbar hidden */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+        
+        /* Animations */
+        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .animate-spin-slow { animation: spin-slow 3s linear infinite; }
+    </style>
+</head>
+<body>
+
+    <div class="browser-window">
+        <div class="browser-header">
+            <div class="traffic-light bg-white"></div>
+            <div class="traffic-light bg-white"></div>
+            <div class="traffic-light bg-white"></div>
+            <div class="flex gap-4 ml-4">
+                <i data-lucide="arrow-left" class="w-4 h-4 opacity-50"></i>
+                <i data-lucide="arrow-right" class="w-4 h-4 opacity-50"></i>
+                <i data-lucide="rotate-cw" class="w-4 h-4 cursor-pointer" onclick="navigateTo('home')"></i>
+            </div>
+            <div class="url-bar">https://www.bridgeu.com/community</div>
+        </div>
+
+        <div id="app-container" class="flex flex-1 overflow-hidden">
+            <!-- Content injected by JS -->
+        </div>
+    </div>
+
+    <!-- TEMPLATES -->
+
+    <!-- 1. 布局 (侧边栏) -->
+    <template id="tpl-layout">
+        <aside class="w-64 border-r-2 border-black bg-white flex flex-col">
+            <div class="p-6 border-b-2 border-black bg-gray-50 flex items-center gap-2">
+                <div class="w-8 h-8 bg-black rounded flex items-center justify-center border-2 border-black text-white">
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                </div>
+                <span class="text-xl font-black tracking-tighter">BridgeU</span>
+            </div>
+            
+            <nav class="flex-1 overflow-y-auto">
+                <div class="p-4 text-xs font-bold text-gray-500 uppercase tracking-widest" id="txt-platform">平台功能</div>
+                <div onclick="navigateTo('home')" class="nav-item active" id="nav-home">
+                    <i data-lucide="home" class="w-4 h-4"></i> <span id="txt-community">社区动态</span>
+                </div>
+                <div onclick="navigateTo('create_post')" class="nav-item" id="nav-post">
+                    <i data-lucide="plus-square" class="w-4 h-4"></i> <span id="txt-post">发布求助</span>
+                </div>
+                <div onclick="navigateTo('chat')" class="nav-item" id="nav-chat">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> <span id="txt-connect">消息互动</span>
+                </div>
+                
+                <div class="mt-auto">
+                    <div class="p-4 border-t-2 border-black">
+                        <div onclick="navigateTo('profile')" class="nav-item" id="nav-profile">
+                            <i data-lucide="user" class="w-4 h-4"></i> <span id="txt-me">个人中心 (陈同学)</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main id="main-area" class="flex-1 bg-white overflow-y-auto p-8 relative">
+            <!-- Page content goes here -->
+        </main>
+    </template>
+
+    <!-- 2. 登录页 (默认中文) -->
+    <template id="tpl-login">
+        <div class="flex-1 flex items-center justify-center bg-gray-200 w-full h-full relative">
+            
+            <div class="absolute top-8 right-8 flex border-2 border-black bg-white shadow-sm">
+                <button onclick="switchLoginLang('en')" class="lang-switch-btn" id="btn-lang-en">EN</button>
+                <button onclick="switchLoginLang('zh')" class="lang-switch-btn active border-l-0" id="btn-lang-zh">中文</button>
+            </div>
+
+            <div class="bg-white border-2 border-black p-12 w-96 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <div class="text-center mb-8">
+                    <i data-lucide="globe" class="w-12 h-12 mx-auto mb-4"></i>
+                    <h1 class="text-2xl font-black">BridgeU</h1>
+                    <p class="text-sm text-gray-500 mt-2" id="login-subtitle">连接留学生与本地生活</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="text-xs font-bold block mb-1 uppercase" id="label-email">电子邮箱</label>
+                        <input type="text" class="sketch-input" placeholder="student@cmu.ac.th">
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold block mb-1 uppercase" id="label-password">密码</label>
+                        <input type="password" class="sketch-input" placeholder="******">
+                    </div>
+                    <button onclick="navigateTo('home')" class="sketch-btn w-full py-3 bg-black text-white mt-4" id="btn-login">登录</button>
+                    <div class="text-center text-xs mt-4 underline cursor-pointer" id="link-create">创建新账户</div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- 3. 首页内容 (全中文模拟数据) -->
+    <template id="tpl-home-content">
+        <!-- 智能机器人简报 -->
+        <div class="mb-8 border-2 border-black bg-gray-50 p-4 relative">
+            <div class="absolute top-0 right-0 bg-black text-white text-[10px] font-bold px-2 py-1 flex items-center gap-1">
+                <i data-lucide="bot" class="w-3 h-3"></i> <span id="txt-robot-title">全网情报机器人</span>
+            </div>
+            <div class="flex gap-4">
+                <div class="w-12 h-12 bg-white border-2 border-black flex items-center justify-center rounded-full mt-1">
+                    <i data-lucide="refresh-cw" class="w-5 h-5 animate-spin-slow"></i>
+                </div>
+                <div>
+                    <h3 class="font-black text-sm uppercase tracking-wider mb-1" id="txt-briefing-title">每日简报 · 11月27日</h3>
+                    <div class="text-xs text-gray-500 font-mono mb-2">来源: 曼谷邮报 & 清迈大学官网</div>
+                    <div class="space-y-2" id="briefing-content">
+                         <p class="text-sm font-bold border-l-4 border-blue-500 pl-2 bg-white p-1 mb-2">
+                            🇹🇭 泰国批准针对高潜力外国人的新10年LTR签证。
+                        </p>
+                        <p class="text-sm font-bold border-l-4 border-red-500 pl-2 bg-white p-1">
+                            🏫 清迈大学公布期末考试时间表变更通知。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-black uppercase" id="txt-feed-title">社区动态</h2>
+            <div class="text-xs font-mono border border-black px-2 py-1 rounded-full flex items-center gap-1 bg-yellow-100">
+                <i data-lucide="filter" class="w-3 h-3"></i> 筛选模式已开启
+            </div>
+        </header>
+
+        <!-- 强制标签筛选 -->
+        <div class="mb-8">
+            <div class="text-[10px] font-bold uppercase mb-2 text-gray-400 tracking-widest">生存标签 (必选)</div>
+            <div class="flex flex-wrap gap-2" id="tag-filters">
+                <button class="mandatory-tag active" onclick="filterPosts('all', this)">全部</button>
+                <button class="mandatory-tag" onclick="filterPosts('visa', this)">🛂 #签证</button>
+                <button class="mandatory-tag" onclick="filterPosts('rent', this)">🏠 #租房</button>
+                <button class="mandatory-tag" onclick="filterPosts('learning', this)">📚 #学习</button>
+                <button class="mandatory-tag" onclick="filterPosts('market', this)">🛒 #二手市场</button>
+            </div>
+        </div>
+
+        <!-- 帖子列表 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="posts-grid">
+            <!-- 帖子 1: 租房 -->
+            <div onclick="navigateTo('detail')" class="sketch-card p-4 cursor-pointer post-item" data-tag="rent">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-200"></div>
+                        <div>
+                            <div class="font-bold text-sm">Somchai 物业</div>
+                            <span class="text-[10px] bg-gray-100 border border-black px-1">本地商家</span>
+                        </div>
+                    </div>
+                    <span class="px-2 py-1 bg-black text-white text-xs font-bold">#租房</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1">清迈大学后门公寓出租（宁曼区）</h3>
+                <p class="text-sm text-gray-600 font-serif line-clamp-2">
+                    家具齐全，1卧1卫，免费WiFi。月租 8,000 泰铢。寻找长租学生。CMU学生免押金。
+                </p>
+                <div class="flex items-center justify-between mt-4 pt-2 border-t-2 border-black border-dashed text-xs font-mono text-gray-500">
+                    <span>2小时前</span>
+                    <div class="flex gap-3 text-black font-bold">
+                        <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3"></i> 24</span>
+                        <span class="flex items-center gap-1"><i data-lucide="message-square" class="w-3 h-3"></i> 5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 帖子 2: 学习 (替换了摩托车) -->
+            <div class="sketch-card p-4 cursor-pointer post-item" data-tag="learning">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-200"></div>
+                        <div>
+                            <div class="font-bold text-sm">汉斯 (德国)</div>
+                            <span class="text-[10px] bg-gray-100 border border-black px-1">国际学生</span>
+                        </div>
+                    </div>
+                    <span class="px-2 py-1 bg-black text-white text-xs font-bold">#学习</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1">寻找语言交换伙伴</h3>
+                <p class="text-sm text-gray-600 font-serif line-clamp-2">我想练习泰语或中文。我可以教你德语或英语。一起喝咖啡聊聊吧！</p>
+                <div class="flex items-center justify-between mt-4 pt-2 border-t-2 border-black border-dashed text-xs font-mono text-gray-500">
+                    <span>5小时前</span>
+                    <div class="flex gap-3 text-black font-bold">
+                        <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3"></i> 15</span>
+                        <span class="flex items-center gap-1"><i data-lucide="message-square" class="w-3 h-3"></i> 8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 帖子 3: 签证 -->
+            <div class="sketch-card p-4 cursor-pointer post-item" data-tag="visa">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-200"></div>
+                        <div>
+                            <div class="font-bold text-sm">李明</div>
+                            <span class="text-[10px] bg-gray-100 border border-black px-1">中国学生</span>
+                        </div>
+                    </div>
+                    <span class="px-2 py-1 bg-black text-white text-xs font-bold">#签证</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1">TM30 在线申报问题求助</h3>
+                <p class="text-sm text-gray-600 font-serif line-clamp-2">有人知道怎么在线进行 TM30 申报吗？移民局那个 APP 在我手机上一直闪退。</p>
+                <div class="flex items-center justify-between mt-4 pt-2 border-t-2 border-black border-dashed text-xs font-mono text-gray-500">
+                    <span>1天前</span>
+                    <div class="flex gap-3 text-black font-bold">
+                        <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3"></i> 8</span>
+                        <span class="flex items-center gap-1"><i data-lucide="message-square" class="w-3 h-3"></i> 15</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 帖子 4: 二手市场 -->
+            <div class="sketch-card p-4 cursor-pointer post-item" data-tag="market">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-200"></div>
+                        <div>
+                            <div class="font-bold text-sm">莎拉 (英国)</div>
+                            <span class="text-[10px] bg-gray-100 border border-black px-1">国际学生</span>
+                        </div>
+                    </div>
+                    <span class="px-2 py-1 bg-black text-white text-xs font-bold">#二手市场</span>
+                </div>
+                <h3 class="text-lg font-bold mb-1">搬家出售：风扇和显示器</h3>
+                <p class="text-sm text-gray-600 font-serif line-clamp-2">下周离开清迈。出售 Hatari 风扇 (300铢) 和戴尔显示器 (2000铢)。</p>
+                <div class="flex items-center justify-between mt-4 pt-2 border-t-2 border-black border-dashed text-xs font-mono text-gray-500">
+                    <span>2天前</span>
+                    <div class="flex gap-3 text-black font-bold">
+                        <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3"></i> 5</span>
+                        <span class="flex items-center gap-1"><i data-lucide="message-square" class="w-3 h-3"></i> 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- 4. 详情页 (已移除翻译按钮) -->
+    <template id="tpl-detail-content">
+        <button onclick="navigateTo('home')" class="mb-4 text-sm font-bold flex items-center gap-1 hover:underline">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> <span id="btn-back">返回列表</span>
+        </button>
+
+        <div class="flex gap-8">
+            <div class="flex-1 bg-white border-2 border-black p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-12 border-2 border-black rounded-full bg-gray-200"></div>
+                    <div>
+                        <h3 class="font-bold text-lg">Somchai 物业</h3>
+                        <span class="text-xs bg-gray-100 border border-black px-1">本地商家</span>
+                    </div>
+                    <button class="ml-auto sketch-btn px-4 py-1 text-xs">关注</button>
+                </div>
+
+                <!-- 内容 -->
+                <h1 class="text-2xl font-black mb-4" id="post-title">清迈大学附近公寓出租（宁曼区）</h1>
+                
+                <div id="post-content-area" class="text-base font-serif leading-relaxed">
+                    <p>家具齐全，1间卧室，免费WiFi。月租 8,000 泰铢。寻找长租学生。CMU学生免押金。</p>
+                </div>
+
+                <div class="border-t-2 border-black pt-6 mt-8">
+                    <h3 class="font-bold mb-4">评论 (5)</h3>
+                    <div class="flex gap-4 mt-6">
+                        <input type="text" class="sketch-input flex-1" placeholder="写下你的评论...">
+                        <button class="sketch-btn px-6 bg-black text-white">发布</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-72 space-y-6">
+                <div class="bg-white border-2 border-black p-6 text-center">
+                    <h3 class="font-bold text-lg mb-4">联系房东</h3>
+                    <button onclick="navigateTo('chat')" class="sketch-btn w-full py-2 bg-black text-white mb-2">立即沟通</button>
+                    <p class="text-[10px] text-gray-500">* 需要互相关注</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- 5. 发布帖子 (AI审核 + 中文提示) -->
+    <template id="tpl-create-post">
+        <div class="max-w-2xl mx-auto bg-white border-2 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <h2 class="text-2xl font-black uppercase mb-6">发布求助</h2>
+            <div class="mb-6">
+                <label class="text-xs font-bold uppercase block mb-2">选择标签 (必选)</label>
+                <div class="flex flex-wrap gap-2" id="post-tags">
+                    <button class="mandatory-tag" onclick="selectTag(this)">#签证</button>
+                    <button class="mandatory-tag" onclick="selectTag(this)">#租房</button>
+                    <button class="mandatory-tag" onclick="selectTag(this)">#学习</button>
+                    <button class="mandatory-tag" onclick="selectTag(this)">#二手市场</button>
+                </div>
+            </div>
+            <textarea class="w-full border-2 border-black p-4 font-serif text-sm outline-none resize-none mb-4 h-32" 
+                id="post-text"
+                placeholder="分享生存信息，出售物品，或寻求帮助..."></textarea>
+
+            <!-- 图片上传占位符 -->
+            <div class="mb-6 border-2 border-black border-dashed bg-gray-50 h-24 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-100 transition-colors relative">
+                <input type="file" class="absolute inset-0 opacity-0 cursor-pointer" accept="image/*" onchange="handleImageUpload(this)">
+                <div class="flex flex-col items-center pointer-events-none" id="upload-placeholder">
+                    <i data-lucide="image-plus" class="w-6 h-6 mb-1 text-gray-400"></i>
+                    <span class="text-xs font-bold text-gray-500 uppercase">添加图片 / 视频</span>
+                </div>
+                <div id="image-preview" class="hidden w-full h-full flex items-center justify-center p-2">
+                    <img src="" class="max-h-full object-contain border border-black" />
+                </div>
+            </div>
+
+            <div id="ai-status" class="hidden mb-4 p-3 border-2 text-xs font-bold flex items-center gap-2"></div>
+
+            <button onclick="simulatePublish()" class="sketch-btn w-full py-3 bg-black text-white justify-center" id="publish-btn">
+                立即发布
+            </button>
+        </div>
+    </template>
+
+    <!-- 6. 聊天列表 -->
+    <template id="tpl-chat">
+        <div class="flex h-full border-2 border-black bg-white">
+            <div class="w-72 border-r-2 border-black p-0">
+                <div class="p-4 border-b-2 border-black font-bold bg-gray-50">消息列表</div>
+                <div onclick="loadChat('mutual')" class="p-4 border-b-2 border-black hover:bg-gray-50 cursor-pointer">
+                    <div class="font-bold text-sm">Somchai 物业</div>
+                    <div class="text-xs text-gray-500 truncate">什么时候来看房？</div>
+                </div>
+                <div onclick="loadChat('stranger')" class="p-4 border-b-2 border-black hover:bg-gray-50 cursor-pointer bg-gray-100">
+                    <div class="font-bold text-sm">汉斯 (德国)</div>
+                    <div class="text-[10px] border border-black px-1 inline-block bg-white">陌生人</div>
+                </div>
+            </div>
+            <div class="flex-1 flex flex-col" id="chat-area">
+                <div class="flex-1 flex items-center justify-center text-gray-400 font-mono text-sm">
+                    选择一个对话
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- 7. 个人中心 (含编辑按钮) -->
+    <template id="tpl-profile">
+        <div class="flex flex-col h-full bg-white">
+            <div class="relative mb-12">
+                <div class="h-32 bg-gray-200 border-b-2 border-black"></div>
+                <div class="absolute -bottom-10 left-4 w-20 h-20 border-2 border-black rounded-full bg-white overflow-hidden shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Chen&backgroundColor=e5e5e5" class="w-full h-full object-cover grayscale" />
+                </div>
+                <div class="absolute top-36 right-4 flex gap-2">
+                    <button onclick="navigateTo('edit_profile')" class="px-4 py-1.5 bg-black text-white border-2 border-black text-xs font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,0.2)] hover:bg-gray-800 cursor-pointer flex items-center gap-1">
+                        <i data-lucide="edit-2" class="w-3 h-3"></i> 编辑资料
+                    </button>
+                </div>
+            </div>
+
+            <div class="px-4 pb-20 overflow-y-auto">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-black">陈同学</h2>
+                    <div class="text-xs font-mono text-gray-500 mb-2">@chen_student</div>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="text-[10px] bg-black text-white px-2 py-0.5 font-bold">中国留学生</span>
+                        <span class="text-[10px] bg-gray-100 border border-black px-2 py-0.5 flex items-center gap-1">
+                            <i data-lucide="map-pin" class="w-3 h-3"></i> 泰国清迈
+                        </span>
+                    </div>
+                    <p class="text-sm font-serif text-gray-800 mb-3">CMU 大一新生。正在宁曼路附近找安静的公寓。爱吃辣！🌶️</p>
+                    
+                    <div class="flex gap-4 py-3 border-y-2 border-black border-dashed mb-4">
+                        <div class="text-center"><span class="font-black text-lg">12</span> <span class="text-[10px] uppercase text-gray-500">帖子</span></div>
+                        <div class="text-center"><span class="font-black text-lg">24</span> <span class="text-[10px] uppercase text-gray-500">关注</span></div>
+                        <div class="text-center"><span class="font-black text-lg">8</span> <span class="text-[10px] uppercase text-gray-500">粉丝</span></div>
+                    </div>
+                </div>
+
+                <div class="border-t-2 border-black pt-4">
+                    <h3 class="text-sm font-black uppercase mb-4 flex items-center gap-2">
+                        <i data-lucide="plus-square" class="w-4 h-4"></i> 我的发布
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="sketch-card p-3">
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="px-1.5 py-0.5 bg-black text-white text-[10px] font-bold">#二手市场</span>
+                                <span class="text-[10px] text-gray-400">2天前</span>
+                            </div>
+                            <h4 class="font-bold text-sm mb-1">求购二手冰箱</h4>
+                            <p class="text-xs text-gray-600 line-clamp-1 mb-2">预算 2000 泰铢左右。可自取。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- 8. 编辑资料页面 -->
+    <template id="tpl-edit-profile">
+        <div class="max-w-2xl mx-auto bg-white border-2 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-black uppercase">编辑资料</h2>
+                <button onclick="navigateTo('profile')" class="text-sm font-bold underline">取消</button>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex justify-center mb-6">
+                     <div class="w-20 h-20 rounded-full border-2 border-black bg-gray-100 flex items-center justify-center cursor-pointer hover:bg-gray-200 relative">
+                        <i data-lucide="camera" class="w-6 h-6 text-gray-400"></i>
+                        <div class="absolute -bottom-1 -right-1 bg-black text-white p-1 rounded-full border border-white">
+                            <i data-lucide="plus" class="w-3 h-3"></i>
+                        </div>
+                     </div>
+                </div>
+
+                <div>
+                    <label class="text-xs font-bold block mb-1 uppercase">显示名称</label>
+                    <input type="text" class="sketch-input" value="陈同学">
+                </div>
+                <div>
+                    <label class="text-xs font-bold block mb-1 uppercase">用户名</label>
+                    <input type="text" class="sketch-input" value="@chen_student" disabled style="background-color: #f5f5f5; color: #999;">
+                </div>
+                <div>
+                    <label class="text-xs font-bold block mb-1 uppercase">个人简介</label>
+                    <textarea class="sketch-input h-24">CMU 大一新生。正在宁曼路附近找安静的公寓。爱吃辣！🌶️</textarea>
+                </div>
+                <div>
+                    <label class="text-xs font-bold block mb-1 uppercase">所在地</label>
+                    <input type="text" class="sketch-input" value="泰国清迈">
+                </div>
+                
+                <button onclick="alert('资料已更新！'); navigateTo('profile')" class="sketch-btn w-full py-3 bg-black text-white justify-center mt-4">
+                    保存修改
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        const app = document.getElementById('app-container');
+        let currentLang = 'en';
+        
+        // 敏感词列表（包含中英文，用于演示）
+        const SENSITIVE_WORDS = ["scam", "hate", "fake", "drug", "kill", "attack", "stupid", "fuck", "诈骗", "毒品", "杀", "滚"];
+
+        const LANG = {
+            en: {
+                subtitle: "Connecting Students & Local Life",
+                email: "EMAIL",
+                password: "PASSWORD",
+                login: "LOGIN",
+                create: "Create an account",
+                community: "Community Feed",
+                postHelp: "Post Help",
+                connect: "Connect",
+                me: "Me (Chen)",
+                robotTitle: "INTELLIGENCE ROBOT",
+                briefingTitle: "Daily Briefing · Nov 27",
+                back: "Back to Feed",
+            },
+            zh: {
+                subtitle: "连接留学生与本地生活",
+                email: "电子邮箱",
+                password: "密码",
+                login: "登录",
+                create: "创建新账户",
+                community: "社区动态",
+                postHelp: "发布求助",
+                connect: "消息互动",
+                me: "个人中心 (Chen)",
+                robotTitle: "全网情报机器人",
+                briefingTitle: "每日简报 · 11月27日",
+                back: "返回列表",
+            }
+        };
+
+        const BRIEFING_CONTENT = {
+            en: `
+                <p class="text-sm font-bold border-l-4 border-blue-500 pl-2 bg-white p-1 mb-2">
+                    🇬🇧 Thailand approves new 10-year LTR visa for high-potential foreigners.
+                </p>
+                <p class="text-sm font-bold border-l-4 border-red-500 pl-2 bg-white p-1">
+                    🇨🇳 泰国批准针对高潜力外国人的新10年LTR签证。
+                </p>
+            `,
+            zh: `
+                <p class="text-sm font-bold border-l-4 border-blue-500 pl-2 bg-white p-1 mb-2">
+                    🇨🇳 泰国批准针对高潜力外国人的新10年LTR签证。
+                </p>
+                <p class="text-sm font-bold border-l-4 border-red-500 pl-2 bg-white p-1">
+                    🇬🇧 Thailand approves new 10-year LTR visa for high-potential foreigners.
+                </p>
+            `
+        };
+
+        function switchLoginLang(lang) {
+            currentLang = lang;
+            document.getElementById('login-subtitle').innerText = LANG[lang].subtitle;
+            document.getElementById('label-email').innerText = LANG[lang].email;
+            document.getElementById('label-password').innerText = LANG[lang].password;
+            document.getElementById('btn-login').innerText = LANG[lang].login;
+            document.getElementById('link-create').innerText = LANG[lang].create;
+
+            if(lang === 'zh') {
+                document.getElementById('btn-lang-zh').classList.add('active');
+                document.getElementById('btn-lang-en').classList.remove('active');
+            } else {
+                document.getElementById('btn-lang-en').classList.add('active');
+                document.getElementById('btn-lang-zh').classList.remove('active');
+            }
+        }
+
+        function navigateTo(page) {
+            if (page === 'login') {
+                const tpl = document.getElementById('tpl-login');
+                app.innerHTML = tpl.innerHTML;
+                switchLang(currentLang); 
+            } else {
+                if (!document.getElementById('main-area')) {
+                    const layoutTpl = document.getElementById('tpl-layout');
+                    app.innerHTML = layoutTpl.innerHTML;
+                    
+                    if(currentLang === 'zh') {
+                        document.getElementById('txt-platform').innerText = "平台功能";
+                        document.getElementById('txt-community').innerText = LANG.zh.community;
+                        document.getElementById('txt-post').innerText = LANG.zh.postHelp;
+                        document.getElementById('txt-connect').innerText = LANG.zh.connect;
+                        document.getElementById('txt-me').innerText = LANG.zh.me;
+                    }
+                }
+                
+                const mainArea = document.getElementById('main-area');
+                let tplId = 'tpl-home-content'; 
+                
+                if (page === 'home') tplId = 'tpl-home-content';
+                if (page === 'detail') tplId = 'tpl-detail-content';
+                if (page === 'create_post') tplId = 'tpl-create-post';
+                if (page === 'chat') tplId = 'tpl-chat';
+                if (page === 'profile') tplId = 'tpl-profile';
+                if (page === 'edit_profile') tplId = 'tpl-edit-profile';
+
+                const contentTpl = document.getElementById(tplId);
+                mainArea.innerHTML = contentTpl.innerHTML;
+                
+                document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+                let navId = 'nav-' + (page === 'detail' ? 'home' : (page === 'edit_profile' ? 'profile' : page));
+                const el = document.getElementById(navId);
+                if(el) el.classList.add('active');
+
+                if (page === 'home') {
+                    if(currentLang === 'zh') {
+                        document.getElementById('txt-robot-title').innerText = LANG.zh.robotTitle;
+                        document.getElementById('txt-briefing-title').innerText = LANG.zh.briefingTitle;
+                        document.getElementById('txt-feed-title').innerText = LANG.zh.community;
+                        document.getElementById('briefing-content').innerHTML = BRIEFING_CONTENT.zh;
+                    } else {
+                        document.getElementById('briefing-content').innerHTML = BRIEFING_CONTENT.en;
+                    }
+                }
+
+                if (page === 'detail') {
+                    if(currentLang === 'zh') {
+                        document.getElementById('btn-back').innerText = LANG.zh.back;
+                    }
+                }
+            }
+            lucide.createIcons();
+        }
+
+        function switchLang(lang) {
+            currentLang = lang;
+            const elSubtitle = document.getElementById('login-subtitle');
+            if(elSubtitle) {
+                elSubtitle.innerText = LANG[lang].subtitle;
+                document.getElementById('label-email').innerText = LANG[lang].email;
+                document.getElementById('label-password').innerText = LANG[lang].password;
+                document.getElementById('btn-login').innerText = LANG[lang].login;
+                document.getElementById('link-create').innerText = LANG[lang].create;
+            }
+            if(lang === 'zh') {
+                document.getElementById('btn-lang-zh')?.classList.add('active');
+                document.getElementById('btn-lang-en')?.classList.remove('active');
+            } else {
+                document.getElementById('btn-lang-en')?.classList.add('active');
+                document.getElementById('btn-lang-zh')?.classList.remove('active');
+            }
+        }
+
+        window.handleImageUpload = function(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('upload-placeholder').classList.add('hidden');
+                    const previewDiv = document.getElementById('image-preview');
+                    previewDiv.classList.remove('hidden');
+                    previewDiv.querySelector('img').src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        window.filterPosts = function(tag, btn) {
+            document.querySelectorAll('#tag-filters .mandatory-tag').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const posts = document.querySelectorAll('.post-item');
+            posts.forEach(post => {
+                if (tag === 'all' || post.dataset.tag === tag) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+
+        window.selectTag = function(btn) {
+            document.querySelectorAll('#post-tags .mandatory-tag').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // AI Moderation Logic
+        window.simulatePublish = function() {
+            const statusDiv = document.getElementById('ai-status');
+            const btn = document.getElementById('publish-btn');
+            const postContent = document.getElementById('post-text').value.toLowerCase(); // Get content
+            
+            statusDiv.className = "mb-4 p-3 bg-blue-50 border-2 border-blue-200 text-blue-800 text-xs font-bold flex items-center gap-2";
+            statusDiv.innerHTML = `<i data-lucide="bot" class="w-4 h-4 animate-bounce"></i> AI正在扫描诈骗及违规内容...`;
+            statusDiv.classList.remove('hidden');
+            btn.innerText = "处理中...";
+            btn.disabled = true;
+            lucide.createIcons();
+
+            setTimeout(() => {
+                // Check for sensitive words
+                const detectedWord = SENSITIVE_WORDS.find(word => postContent.includes(word));
+                
+                if (!detectedWord) {
+                    statusDiv.className = "mb-4 p-3 bg-green-50 border-2 border-green-500 text-green-800 text-xs font-bold flex items-center gap-2";
+                    statusDiv.innerHTML = `<i data-lucide="shield-check" class="w-4 h-4"></i> 内容安全。发布成功！`;
+                } else {
+                    statusDiv.className = "mb-4 p-3 bg-red-50 border-2 border-red-500 text-red-800 text-xs font-bold flex items-center gap-2";
+                    statusDiv.innerHTML = `<i data-lucide="alert-circle" class="w-4 h-4"></i> 拦截：内容包含违规词 "${detectedWord}"。`;
+                }
+                btn.innerText = "立即发布";
+                btn.disabled = false;
+                lucide.createIcons();
+            }, 1500);
+        }
+
+        window.loadChat = function(type) {
+            const area = document.getElementById('chat-area');
+            if (type === 'mutual') {
+                area.innerHTML = `
+                    <div class="p-4 border-b-2 border-black flex items-center gap-2 bg-gray-50">
+                        <div class="w-3 h-3 bg-green-500 rounded-full border border-black"></div>
+                        <span class="font-bold">Somchai 物业</span>
+                    </div>
+                    <div class="flex-1 p-4 space-y-4 overflow-y-auto">
+                        <div class="text-center text-xs text-gray-400">今天</div>
+                        <div class="flex justify-end"><div class="bg-black text-white p-3 text-sm max-w-[70%] border-2 border-black">房间还在吗？</div></div>
+                        <div class="flex justify-start"><div class="bg-white text-black p-3 text-sm max-w-[70%] border-2 border-black shadow-sm">在的！什么时候来看房？</div></div>
+                    </div>
+                    <div class="p-4 border-t-2 border-black flex gap-2">
+                        <input type="text" class="sketch-input" placeholder="输入消息...">
+                        <button class="sketch-btn px-4"><i data-lucide="send" class="w-4 h-4"></i></button>
+                    </div>
+                `;
+            } else {
+                area.innerHTML = `
+                    <div class="p-4 border-b-2 border-black flex items-center gap-2 bg-gray-50">
+                        <div class="w-3 h-3 bg-gray-300 rounded-full border border-black"></div>
+                        <span class="font-bold text-gray-500">汉斯 (德国)</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center justify-center p-8 text-center">
+                        <div class="border-2 border-black border-dashed p-6 bg-gray-50 max-w-xs">
+                            <div class="flex justify-center mb-3 text-red-500"><i data-lucide="alert-circle" class="w-8 h-8"></i></div>
+                            <h3 class="font-black uppercase mb-2">连接待定</h3>
+                            <p class="text-xs font-serif text-gray-600 mb-4">为了确保安全，只有在 <strong>互相关注</strong> 后才能聊天。</p>
+                            <button class="sketch-btn w-full py-2">请求关注</button>
+                        </div>
+                    </div>
+                `;
+            }
+            lucide.createIcons();
+        }
+
+        navigateTo('login');
+    </script>
+</body>
+</html>
