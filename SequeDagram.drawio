@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="24">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1" pages="24">
   <diagram name="SD01" id="gjCvm157liqIJr37oaXC">
-    <mxGraphModel dx="1617" dy="1149" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1843" dy="1251" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -331,7 +331,7 @@
           <mxGeometry height="58" width="550" x="1847.9977099609375" y="1728.995623372396" as="geometry" />
         </mxCell>
         <mxCell id="PGYViIvlhlLV7wbFqZxn-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=25;strokeWidth=3;fontStyle=1" value="User" vertex="1">
-          <mxGeometry height="866" width="150" x="994" y="5040" as="geometry" />
+          <mxGeometry height="866" width="150" x="975" y="5045" as="geometry" />
         </mxCell>
         <mxCell id="PGYViIvlhlLV7wbFqZxn-17" parent="PGYViIvlhlLV7wbFqZxn-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontStyle=1" value="" vertex="1">
           <mxGeometry height="706" width="10" x="68" y="79" as="geometry" />
@@ -2441,58 +2441,1095 @@
     </mxGraphModel>
   </diagram>
   <diagram id="SMNbRSY4bFjsFHkvSVcp" name="第 7 页">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1843" dy="1651" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="pOsQaQTSrgIcVORnatMU-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontSize=18;fontStyle=1" value="Client (frontend)" vertex="1">
+          <mxGeometry height="1106" width="150" x="580" y="3" as="geometry" />
+        </mxCell>
+        <mxCell id="-mSTsY79MJZ9wBlHkf_O-5" parent="pOsQaQTSrgIcVORnatMU-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="869" width="10" x="70" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontSize=18;fontStyle=1" value="PostController" vertex="1">
+          <mxGeometry height="1076" width="150" x="929" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontSize=18;fontStyle=1" value="CommunityPostRepository" vertex="1">
+          <mxGeometry height="1061" width="236" x="1197" y="21" as="geometry" />
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontSize=18;fontStyle=1" value="PostLikeRepository" vertex="1">
+          <mxGeometry height="1054" width="178" x="1452" y="21" as="geometry" />
+        </mxCell>
+        <mxCell id="-mSTsY79MJZ9wBlHkf_O-2" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="416" y="101" as="geometry" />
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontSize=18;fontStyle=1" value="CommentRepository" vertex="1">
+          <mxGeometry height="1042" width="175" x="1697" y="22" as="geometry" />
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-12" parent="1" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#000000;height=20;width=40;strokeWidth=3;fontSize=18;fontStyle=1" value="loop" vertex="1">
+          <mxGeometry height="276" width="963" x="890" y="639" as="geometry" />
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-13" parent="pOsQaQTSrgIcVORnatMU-12" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;strokeWidth=3;fontSize=18;fontStyle=1" value="[For each post]" vertex="1">
+          <mxGeometry height="20" width="928.0453720508167" x="34.954627949183305" as="geometry" />
+        </mxCell>
+        <mxCell id="-mSTsY79MJZ9wBlHkf_O-7" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="850" width="10" x="998" y="153" as="geometry" />
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-14" edge="1" parent="1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontSize=18;fontStyle=1" target="pOsQaQTSrgIcVORnatMU-2" value="Open community feed / pull to refresh">
+          <mxGeometry relative="1" x="0.0409" y="19" as="geometry">
+            <mxPoint x="-1" as="offset" />
+            <Array as="points">
+              <mxPoint x="431" y="131" />
+            </Array>
+            <mxPoint x="421" y="131" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-16" edge="1" parent="1" source="pOsQaQTSrgIcVORnatMU-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontSize=18;fontStyle=1" target="pOsQaQTSrgIcVORnatMU-3" value="GET /api/posts?lang=en&amp;page=0&amp;size=20&amp;q=keyword&amp;tag=Study">
+          <mxGeometry relative="1" x="-0.0029" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="734" y="187" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-18" edge="1" parent="1" source="pOsQaQTSrgIcVORnatMU-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontSize=18;fontStyle=1" target="pOsQaQTSrgIcVORnatMU-4" value="findAllByOrderByCreatedAtDesc()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1172" y="243" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-20" edge="1" parent="1" source="pOsQaQTSrgIcVORnatMU-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontSize=18;fontStyle=1" target="pOsQaQTSrgIcVORnatMU-3" value="List&lt;CommunityPost&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1175" y="299" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-22" edge="1" parent="1" source="pOsQaQTSrgIcVORnatMU-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontSize=18;fontStyle=1" target="pOsQaQTSrgIcVORnatMU-3" value="Filter approved posts only">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1055" y="355" />
+              <mxPoint x="1055" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-24" edge="1" parent="1" source="pOsQaQTSrgIcVORnatMU-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontSize=18;fontStyle=1" target="pOsQaQTSrgIcVORnatMU-3" value="Filter out reported posts">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1055" y="441" />
+              <mxPoint x="1055" y="471" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-26" edge="1" parent="1" source="pOsQaQTSrgIcVORnatMU-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontSize=18;fontStyle=1" target="pOsQaQTSrgIcVORnatMU-3" value="Filter out system news posts">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1055" y="527" />
+              <mxPoint x="1055" y="557" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-34" edge="1" parent="1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontSize=18;fontStyle=1" target="-mSTsY79MJZ9wBlHkf_O-8" value="countByPost(post)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1402" y="687" />
+            </Array>
+            <mxPoint x="1003.8333333333335" y="666" as="sourcePoint" />
+            <mxPoint x="1599.4999999999995" y="666" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-36" edge="1" parent="1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontSize=18;fontStyle=1" value="countByPost(post)">
+          <mxGeometry relative="1" x="-0.3968" y="-35" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1509.17" y="731" />
+            </Array>
+            <mxPoint x="1010.0033333333334" y="731" as="sourcePoint" />
+            <mxPoint x="1789.17" y="731" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-38" edge="1" parent="1" source="pOsQaQTSrgIcVORnatMU-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontSize=18;fontStyle=1" target="pOsQaQTSrgIcVORnatMU-3" value="toPostResponse(post, lang)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1043" y="771" />
+              <mxPoint x="1043" y="835" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pOsQaQTSrgIcVORnatMU-40" edge="1" parent="1" source="-mSTsY79MJZ9wBlHkf_O-7" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontSize=18;fontStyle=1" target="pOsQaQTSrgIcVORnatMU-2" value="200 List&lt;PostListResponse&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="766" y="964" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HmylJLy3rskCTBBX8HER-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=3;fontSize=18;fontStyle=1" value="User" vertex="1">
+          <mxGeometry height="70" width="151" x="346" as="geometry" />
+        </mxCell>
+        <mxCell id="HmylJLy3rskCTBBX8HER-2" edge="1" parent="1" source="-mSTsY79MJZ9wBlHkf_O-2" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=3;fontSize=18;fontStyle=1" target="HmylJLy3rskCTBBX8HER-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="422" y="1125" as="sourcePoint" />
+            <mxPoint x="390" y="247" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-mSTsY79MJZ9wBlHkf_O-1" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=3;fontSize=17;fontStyle=1" target="-mSTsY79MJZ9wBlHkf_O-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="422" y="1125" as="sourcePoint" />
+            <mxPoint x="422" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-mSTsY79MJZ9wBlHkf_O-6" edge="1" parent="1" source="pOsQaQTSrgIcVORnatMU-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontSize=18;fontStyle=1" target="-mSTsY79MJZ9wBlHkf_O-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="1003" y="964" as="sourcePoint" />
+            <mxPoint x="655" y="964" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-mSTsY79MJZ9wBlHkf_O-8" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="68" width="10" x="1539" y="644" as="geometry" />
+        </mxCell>
+        <mxCell id="-mSTsY79MJZ9wBlHkf_O-9" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="1780" y="699" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="e-wJdnRmEbJtFB7Kv-Wa" name="第 8 页">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1997" dy="1355" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;fontSize=18;fontStyle=1;strokeWidth=3;" value="User" vertex="1">
+          <mxGeometry height="1581" width="35" x="295" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-1" parent="j7aajVkYRn6ZURAbpeFy-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="9" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=18;fontStyle=1;strokeWidth=3;" value="Client" vertex="1">
+          <mxGeometry height="1581" width="150" x="470" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-2" parent="j7aajVkYRn6ZURAbpeFy-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="68" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-3" parent="j7aajVkYRn6ZURAbpeFy-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="68" y="889" as="geometry" />
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=18;fontStyle=1;strokeWidth=3;" value="PostController" vertex="1">
+          <mxGeometry height="1581" width="150" x="747" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-4" parent="j7aajVkYRn6ZURAbpeFy-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="608" width="10" x="71" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-6" parent="j7aajVkYRn6ZURAbpeFy-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="137" width="11" x="69.5" y="824" as="geometry" />
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=18;fontStyle=1;strokeWidth=3;" value="LanguageDetectionService" vertex="1">
+          <mxGeometry height="1581" width="219" x="998" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-8" parent="j7aajVkYRn6ZURAbpeFy-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="120" width="10" x="105" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=18;fontStyle=1;strokeWidth=3;" value="TranslationService" vertex="1">
+          <mxGeometry height="1581" width="158" x="1267" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-9" parent="j7aajVkYRn6ZURAbpeFy-5" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="142" width="10" x="74" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=18;fontStyle=1;strokeWidth=3;" value="ContentModerationService" vertex="1">
+          <mxGeometry height="1581" width="220" x="1475" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-10" parent="j7aajVkYRn6ZURAbpeFy-6" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="189" width="10" x="105" y="588" as="geometry" />
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=18;fontStyle=1;strokeWidth=3;" value="CommunityPostRepository" vertex="1">
+          <mxGeometry height="1581" width="221" x="1745" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-7" parent="j7aajVkYRn6ZURAbpeFy-7" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="114" width="10" x="108" y="842" as="geometry" />
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-12" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-2" value="Click &quot;Create Post&quot; and submit form">
+          <mxGeometry relative="1" x="0.0062" y="9" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="456" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-14" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-3" value="POST /api/posts (title, body, tags, category)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="635" y="187" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-16" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-4" value="detectLanguage(title + body)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="973" y="243" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-18" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-3" value="detectedLang (zh/en/th)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="976" y="299" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-20" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-5" value="translateContent(title, body, detectedLang)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1092" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-22" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-5" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-3" value="TranslationResult (titleZh, titleEn, contentZh, contentEn)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1095" y="411" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-24" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-3" style="curved=0;endArrow=block;rounded=0;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-3" value="Create CommunityPost entity">
+          <mxGeometry relative="1" x="-0.0299" y="34" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="873" y="467" />
+              <mxPoint x="873" y="497" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-26" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-3" style="curved=0;endArrow=block;rounded=0;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-3" value="Set translations">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="873" y="553" />
+              <mxPoint x="873" y="583" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-28" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-6" value="moderatePost(post)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1212" y="639" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-30" edge="1" parent="1" source="j7aajVkYRn6ZURAbpeFy-6" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" target="j7aajVkYRn6ZURAbpeFy-3" value="ModerationResult (status, confidence, aiResult, reason)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1215" y="781" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qDdgv5Ebo_53pZbOBPTg-13" connectable="0" parent="j7aajVkYRn6ZURAbpeFy-30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Text" vertex="1">
+          <mxGeometry relative="1" x="-0.2102" y="-1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-38" edge="1" parent="1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" value="save(post)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1351.17" y="876" />
+            </Array>
+            <mxPoint x="826.0033333333334" y="876" as="sourcePoint" />
+            <mxPoint x="1858.17" y="876" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-40" edge="1" parent="1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" value="Saved CommunityPost">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1346.17" y="943" />
+            </Array>
+            <mxPoint x="1850.17" y="943" as="sourcePoint" />
+            <mxPoint x="818.0033333333334" y="943" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-42" edge="1" parent="1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=18;fontStyle=1;strokeWidth=3;" value="201 PostResponse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="635.17" y="966" />
+            </Array>
+            <mxPoint x="817.6699999999995" y="966" as="sourcePoint" />
+            <mxPoint x="542.0033333333334" y="966" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j7aajVkYRn6ZURAbpeFy-44" parent="1" style="fillColor=#ffff88;strokeColor=#9E916F;fontSize=18;fontStyle=1;strokeWidth=3;" value="1. Check sensitive words&#xa;2. AI analysis (confidenceScore 0-100, isSafe)" vertex="1">
+          <mxGeometry height="86" width="411" x="1410" y="659" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="va10HVOV5V9cyPDqSpP2" name="第 9 页">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1997" dy="1355" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="KICLiiaF0USh1CJeypb7-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;strokeWidth=3;fontStyle=1;fontSize=15;" value="User" vertex="1">
+          <mxGeometry height="1114" width="35" x="190" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-21" parent="KICLiiaF0USh1CJeypb7-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontStyle=1;fontSize=15;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="13" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontStyle=1;fontSize=21;" value="Client" vertex="1">
+          <mxGeometry height="1114" width="150" x="380" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-22" parent="KICLiiaF0USh1CJeypb7-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontStyle=1;fontSize=15;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="70" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-25" parent="KICLiiaF0USh1CJeypb7-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontStyle=1;fontSize=15;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="70" y="981" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontStyle=1;fontSize=20;" value="PostController" vertex="1">
+          <mxGeometry height="1114" width="150" x="633" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-23" parent="KICLiiaF0USh1CJeypb7-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontStyle=1;fontSize=15;" value="" vertex="1">
+          <mxGeometry height="878" width="10" x="72" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontStyle=1;fontSize=17;" value="PostLikeRepository" vertex="1">
+          <mxGeometry height="1114" width="164" x="980" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-24" parent="KICLiiaF0USh1CJeypb7-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontStyle=1;fontSize=15;" value="" vertex="1">
+          <mxGeometry height="835" width="10" x="77" y="163" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-5" parent="1" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#B3B3B3;height=20;width=30;strokeWidth=3;fontStyle=1;fontSize=15;" value="alt" vertex="1">
+          <mxGeometry height="608" width="455" x="618" y="263" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-6" parent="KICLiiaF0USh1CJeypb7-5" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;strokeWidth=3;fontStyle=1;fontSize=15;" value="[Like exists]" vertex="1">
+          <mxGeometry height="20" width="425" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-7" parent="KICLiiaF0USh1CJeypb7-5" style="shape=line;dashed=1;whiteSpace=wrap;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;strokeColor=#B3B3B3;strokeWidth=3;fontStyle=1;fontSize=15;" value="[Like does not exist]" vertex="1">
+          <mxGeometry height="4" width="455" y="251" as="geometry" />
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-8" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-2" value="Click like button">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="228" y="131" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-9" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-3" value="POST /api/posts/{postId}/like">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="535" y="187" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-10" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-4" value="findByPostAndUser(post, currentUser)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="894" y="243" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-11" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-3" value="Optional&lt;PostLike&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="897" y="347" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-12" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-4" value="delete(like)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="894" y="403" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-13" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-3" value="Set liked = false">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="759" y="459" />
+              <mxPoint x="759" y="489" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-14" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-3" value="Optional.empty()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="897" y="593" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-15" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-3" value="Create PostLike entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="759" y="649" />
+              <mxPoint x="759" y="679" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-16" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-4" value="save(like)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="894" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-17" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-3" value="Set liked = true">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="759" y="791" />
+              <mxPoint x="759" y="821" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-18" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-4" value="countByPost(post)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="894" y="917" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-19" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-3" value="likeCount">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="897" y="973" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KICLiiaF0USh1CJeypb7-20" edge="1" parent="1" source="KICLiiaF0USh1CJeypb7-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontStyle=1;fontSize=15;" target="KICLiiaF0USh1CJeypb7-2" value="200 {liked: boolean, likeCount: number}">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="538" y="1029" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="iHL2AIdOn4Rlu5t9Df31" name="第 10 页">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1997" dy="1355" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="sb8bilxRRCScszlRgW0k-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;fontSize=16;fontStyle=1;strokeWidth=3;" value="User" vertex="1">
+          <mxGeometry height="1014" width="35" x="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pvpVmwZEFaSTB334Ll2L-1" parent="sb8bilxRRCScszlRgW0k-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="12.5" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;fontStyle=1;strokeWidth=3;" value="Client" vertex="1">
+          <mxGeometry height="1014" width="150" x="380" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pvpVmwZEFaSTB334Ll2L-2" parent="sb8bilxRRCScszlRgW0k-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="844" width="10" x="70" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;fontStyle=1;strokeWidth=3;" value="PostController" vertex="1">
+          <mxGeometry height="1014" width="150" x="683" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pvpVmwZEFaSTB334Ll2L-3" parent="sb8bilxRRCScszlRgW0k-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="863" width="10" x="69.5" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;fontStyle=1;strokeWidth=3;" value="CommunityPostRepository" vertex="1">
+          <mxGeometry height="1014" width="221" x="966" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;fontStyle=1;strokeWidth=3;" value="PostLikeRepository" vertex="1">
+          <mxGeometry height="1014" width="164" x="1202" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=16;fontStyle=1;strokeWidth=3;" value="CommentRepository" vertex="1">
+          <mxGeometry height="1014" width="175" x="1391" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-7" parent="1" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#000000;height=20;width=40;fontSize=16;fontStyle=1;strokeWidth=2;" value="loop" vertex="1">
+          <mxGeometry height="276" width="902" x="647" y="607" as="geometry" />
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-8" parent="sb8bilxRRCScszlRgW0k-7" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontStyle=1" value="[For each post]" vertex="1">
+          <mxGeometry height="20" width="862" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-9" edge="1" parent="1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=16;fontStyle=1;strokeWidth=3;" target="pvpVmwZEFaSTB334Ll2L-3" value="GET /api/posts?lang=en&amp;page=0&#xa;&amp;size=20&amp;tag=Study">
+          <mxGeometry relative="1" x="-0.0009" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="535" y="160" />
+            </Array>
+            <mxPoint x="454.63043478260875" y="160" as="sourcePoint" />
+            <mxPoint x="757.5000000000002" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-10" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-4" value="findAllByOrderByCreatedAtDesc()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="926" y="187" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-11" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-3" value="List&lt;CommunityPost&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="929" y="243" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-12" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-3" style="curved=0;endArrow=block;rounded=0;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-3" value="Filter approved posts only">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="809" y="299" />
+              <mxPoint x="809" y="329" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-13" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-3" style="curved=0;endArrow=block;rounded=0;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-3" value="Filter out reported posts">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="809" y="385" />
+              <mxPoint x="809" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-14" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-3" style="curved=0;endArrow=block;rounded=0;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-3" value="Filter out system news posts">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="809" y="471" />
+              <mxPoint x="809" y="501" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-15" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-3" style="curved=0;endArrow=block;rounded=0;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-3" value="Filter posts by tag (tag parameter)">
+          <mxGeometry relative="1" x="0.0032" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="809" y="557" />
+              <mxPoint x="809" y="587" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-16" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-5" value="countByPost(post)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1047" y="691" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-17" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-6" value="countByPost(post)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1157" y="747" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-18" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-3" style="curved=0;endArrow=block;rounded=0;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-3" value="toPostResponse(post, lang)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="809" y="803" />
+              <mxPoint x="809" y="833" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-19" edge="1" parent="1" source="sb8bilxRRCScszlRgW0k-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-2" value="200 List&lt;PostListResponse&gt; (filtered by tag)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="538" y="929" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-20" edge="1" parent="1" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;fontSize=16;fontStyle=1;strokeWidth=3;" target="sb8bilxRRCScszlRgW0k-2" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="270" y="130" as="sourcePoint" />
+            <mxPoint x="430" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sb8bilxRRCScszlRgW0k-21" connectable="0" parent="sb8bilxRRCScszlRgW0k-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontStyle=1" value="Choose tag&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="-0.1089" y="3" as="geometry">
+            <mxPoint x="3" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pvpVmwZEFaSTB334Ll2L-4" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="69" width="10" x="1279" y="659" as="geometry" />
+        </mxCell>
+        <mxCell id="pvpVmwZEFaSTB334Ll2L-5" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="1474" y="715" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="rskmy6oxB7m9fqdnmIcm" name="第 11 页">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1062" dy="1807" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-15" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;fontSize=19;strokeWidth=3;fontStyle=1" value="User" vertex="1">
+          <mxGeometry height="1506" width="35" x="1805" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-47" parent="pocgAOayeFhwpUZw7Cgo-15" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="12.5" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-16" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=19;strokeWidth=3;fontStyle=1" value="PostController" vertex="1">
+          <mxGeometry height="1506" width="150" x="2318" y="39" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-49" parent="pocgAOayeFhwpUZw7Cgo-16" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="1308" width="10" x="70" y="97" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-17" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=19;strokeWidth=3;fontStyle=1" value="CommunityPostRepository" vertex="1">
+          <mxGeometry height="1505" width="250" x="2556" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-50" parent="pocgAOayeFhwpUZw7Cgo-17" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="333" width="10" x="120" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-18" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=19;strokeWidth=3;fontStyle=1" value="CommentRepository" vertex="1">
+          <mxGeometry height="1503" width="197" x="2827" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-19" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=19;strokeWidth=3;fontStyle=1" value="PostLikeRepository" vertex="1">
+          <mxGeometry height="1503" width="185" x="3052" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-20" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fontSize=19;strokeWidth=3;fontStyle=1" value="UserFollowRepository" vertex="1">
+          <mxGeometry height="1502" width="210" x="3266" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-21" parent="1" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#B3B3B3;height=20;width=30;fontSize=19;fontStyle=1;strokeWidth=3;" value="alt" vertex="1">
+          <mxGeometry height="1224" width="1265" x="2104" y="226" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-22" parent="pocgAOayeFhwpUZw7Cgo-21" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=19;fontStyle=1" value="[Post not found]" vertex="1">
+          <mxGeometry height="20" width="1235" x="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-23" parent="pocgAOayeFhwpUZw7Cgo-21" style="shape=line;dashed=1;whiteSpace=wrap;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;strokeColor=#B3B3B3;fontSize=19;fontStyle=1;strokeWidth=3;" value="[Post found]" vertex="1">
+          <mxGeometry height="4" width="1265" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-24" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-44" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="GET /api/posts/{id}?lang=en">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2263" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-25" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-17" value="findById(id)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2538" y="206" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-26" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-17" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="Optional.empty()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2541" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-27" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-44" value="404 Not Found">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2266" y="366" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-28" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-17" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="Optional&lt;CommunityPost&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2541" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-29" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="curved=0;endArrow=block;rounded=0;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="getCurrentUser()">
+          <mxGeometry relative="1" x="0.0076" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2444" y="526" />
+              <mxPoint x="2444" y="556" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-30" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="curved=0;endArrow=block;rounded=0;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="toPostResponse(post, lang)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2444" y="612" />
+              <mxPoint x="2444" y="642" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-31" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-18" value="findByPostOrderByCreatedAtDesc(post)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2662" y="698" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-32" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-18" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="List&lt;Comment&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2665" y="754" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-33" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="curved=0;endArrow=block;rounded=0;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="filter comments by status ACTIVE">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2444" y="810" />
+              <mxPoint x="2444" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-34" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="curved=0;endArrow=block;rounded=0;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="toCommentResponse(comment, lang) for each comment">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2444" y="896" />
+              <mxPoint x="2444" y="926" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-51" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="645" width="10" x="2920" y="649" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-35" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-19" value="countByPost(post)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2772" y="982" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-36" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-19" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="likeCount">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2775" y="1038" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-37" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-19" value="existsByPostAndUser(post, currentUser)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2772" y="1094" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-38" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-19" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="isLiked (boolean)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2775" y="1150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-39" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-18" value="countByPost(post)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2662" y="1206" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-40" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-18" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="commentCount">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2665" y="1262" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-41" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-20" value="existsByFollowerAndFollowing(currentUser, post.author)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2884" y="1318" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-42" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-20" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-16" value="isFollowing (boolean)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2887" y="1374" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-43" edge="1" parent="1" source="pocgAOayeFhwpUZw7Cgo-16" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;fontSize=19;fontStyle=1;strokeWidth=3;" target="pocgAOayeFhwpUZw7Cgo-44" value="200 PostDetailResponse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2266" y="1430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-44" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;fontStyle=1" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;Client&lt;/font&gt;" vertex="1">
+          <mxGeometry height="1493" width="99" x="1954" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-48" parent="pocgAOayeFhwpUZw7Cgo-44" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="1319" width="10" x="44.5" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-45" edge="1" parent="1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;rounded=0;fontStyle=1;strokeWidth=3;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1831" y="131" as="sourcePoint" />
+            <mxPoint x="2005.5" y="131" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-46" connectable="0" parent="pocgAOayeFhwpUZw7Cgo-45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;User Click one Post&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0534" y="-2" as="geometry">
+            <mxPoint x="-12" y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-52" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="220" width="10" x="3140" y="945" as="geometry" />
+        </mxCell>
+        <mxCell id="pocgAOayeFhwpUZw7Cgo-53" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="144" width="10" x="3366" y="1248" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="m1F6mcitxkEChFEQ2vgh" name="第 12 页">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1996" dy="1626" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;strokeWidth=3;fontSize=19;fontStyle=1" value="User" vertex="1">
+          <mxGeometry height="1296" width="35" x="640" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-28" parent="74G7a0HPmS-YRbaIrtsc-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="96" width="10" x="13" y="93" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontSize=19;fontStyle=1" value="Client" vertex="1">
+          <mxGeometry height="1296" width="150" x="800" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-29" parent="74G7a0HPmS-YRbaIrtsc-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="1040" width="10" x="70" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontSize=19;fontStyle=1" value="ReportController" vertex="1">
+          <mxGeometry height="1296" width="150" x="1270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-30" parent="74G7a0HPmS-YRbaIrtsc-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="1022" width="10" x="70" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontSize=19;fontStyle=1" value="ReportRepository" vertex="1">
+          <mxGeometry height="1296" width="152" x="1800" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;strokeWidth=3;fontSize=19;fontStyle=1" value="ReportModerationService" vertex="1">
+          <mxGeometry height="1297" width="230" x="1990" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-6" parent="1" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#B3B3B3;height=20;width=30;strokeWidth=3;fontSize=19;fontStyle=1" value="alt" vertex="1">
+          <mxGeometry height="432" width="1271" x="860" y="769" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-7" parent="74G7a0HPmS-YRbaIrtsc-6" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;strokeWidth=3;fontSize=19;fontStyle=1" value="[Invalid targetType]" vertex="1">
+          <mxGeometry height="20" width="1250.3668831168832" x="20.633116883116884" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-8" parent="74G7a0HPmS-YRbaIrtsc-6" style="shape=line;dashed=1;whiteSpace=wrap;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;strokeColor=#B3B3B3;strokeWidth=3;fontSize=19;fontStyle=1" value="[Valid targetType]" vertex="1">
+          <mxGeometry height="4" width="1271" y="109" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-9" parent="1" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#B3B3B3;height=20;width=30;strokeWidth=3;fontSize=19;fontStyle=1" value="alt" vertex="1">
+          <mxGeometry height="680" width="1301" x="850" y="531" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-10" parent="74G7a0HPmS-YRbaIrtsc-9" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;strokeWidth=3;fontSize=19;fontStyle=1" value="[Missing or invalid fields]" vertex="1">
+          <mxGeometry height="20" width="1280.1059957173447" x="20.894004282655246" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-11" parent="74G7a0HPmS-YRbaIrtsc-9" style="shape=line;dashed=1;whiteSpace=wrap;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;strokeColor=#B3B3B3;strokeWidth=3;fontSize=19;fontStyle=1" value="[Fields valid]" vertex="1">
+          <mxGeometry height="4" width="1301" y="109" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-12" parent="1" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#B3B3B3;height=20;width=30;strokeWidth=3;fontSize=19;fontStyle=1" value="alt" vertex="1">
+          <mxGeometry height="928" width="1363" x="810" y="293" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-13" parent="74G7a0HPmS-YRbaIrtsc-12" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;strokeWidth=3;fontSize=19;fontStyle=1" value="[User not authenticated]" vertex="1">
+          <mxGeometry height="20" width="1341.3421610169491" x="21.657838983050844" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-14" parent="74G7a0HPmS-YRbaIrtsc-12" style="shape=line;dashed=1;whiteSpace=wrap;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;strokeColor=#B3B3B3;strokeWidth=3;fontSize=19;fontStyle=1" value="[User authenticated]" vertex="1">
+          <mxGeometry height="4" width="1363" y="109" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-15" edge="1" parent="1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" value="Click &quot;Report&quot; on &#xa;post/comment and submit reasons">
+          <mxGeometry relative="1" x="-0.3117" y="-75" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points" />
+            <mxPoint x="657.2307692307695" y="160.00230769230757" as="sourcePoint" />
+            <mxPoint x="874.4999999999998" y="160.00230769230757" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-16" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-2" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-3" value="POST /api/reports (targetType, &#xa;targetId, reasons[], description)">
+          <mxGeometry relative="1" x="-0.0952" y="14" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="970" y="187" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-17" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-3" value="getCurrentUser()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1417" y="243" />
+              <mxPoint x="1417" y="273" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-18" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-2" value="401 Unauthorized">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="973" y="377" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-19" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-3" value="validate request (targetType, targetId, reasons)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1417" y="481" />
+              <mxPoint x="1417" y="511" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-20" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-2" value="400 Bad Request {success: false, message}">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="973" y="615" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-21" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-3" style="curved=0;endArrow=block;rounded=0;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-3" value="parse targetType (POST or COMMENT)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1417" y="719" />
+              <mxPoint x="1417" y="749" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-22" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-2" value="400 Bad Request {success: false, message: &#xa;&quot;Invalid targetType. Must be POST or COMMENT&quot;}">
+          <mxGeometry relative="1" x="0.0012" y="-17" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="973" y="853" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-23" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-4" value="save(Report{ reporter=currentUser, targetType, &#xa;targetId, reasons, description, status=PENDING })">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1767" y="957" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-24" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-4" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-3" value="Saved Report (with id)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1770" y="1013" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-25" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-5" value="processReport(reportId)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1883" y="1069" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-26" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-5" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-3" value="(async processing started)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1886" y="1125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-27" edge="1" parent="1" source="74G7a0HPmS-YRbaIrtsc-3" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;strokeWidth=3;fontSize=19;fontStyle=1" target="74G7a0HPmS-YRbaIrtsc-2" value="200 OK { success: true, message:&#xa; &quot;Report submitted successfully. &#xa;AI review is in progress.&quot;, reportId }">
+          <mxGeometry relative="1" x="-0.0287" y="-27" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="973" y="1181" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-31" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="132" width="10" x="1867" y="896" as="geometry" />
+        </mxCell>
+        <mxCell id="74G7a0HPmS-YRbaIrtsc-34" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="103" width="10" x="2100" y="1044" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="qg-nX8petvtSllauWjqE" name="第 13 页">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1711" dy="1161" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-31" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;" value="User" vertex="1">
+          <mxGeometry height="922" width="35" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-32" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="Client" vertex="1">
+          <mxGeometry height="922" width="150" x="317" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-33" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="PostController" vertex="1">
+          <mxGeometry height="922" width="150" x="728" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-34" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="LanguageDetectionService" vertex="1">
+          <mxGeometry height="922" width="219" x="952" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-35" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="TranslationService" vertex="1">
+          <mxGeometry height="922" width="158" x="1221" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-36" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" value="CommentRepository" vertex="1">
+          <mxGeometry height="922" width="175" x="1429" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-37" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-31" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="oNoeWv3ABlER2bhzCsTN-32" value="Submit comment under a post">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="252" y="171" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-38" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-32" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="oNoeWv3ABlER2bhzCsTN-33" value="POST /api/posts/{postId}/comments (content)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="606" y="227" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-39" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-33" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="oNoeWv3ABlER2bhzCsTN-34" value="detectLanguage(content)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="941" y="283" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-40" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-34" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="oNoeWv3ABlER2bhzCsTN-33" value="detectedLang">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="944" y="339" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-41" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-33" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="oNoeWv3ABlER2bhzCsTN-35" value="translateContent(&quot;&quot;, content, detectedLang)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-42" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-35" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="oNoeWv3ABlER2bhzCsTN-33" value="TranslationResult (bodyZh, bodyEn)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1063" y="451" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-43" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-33" style="curved=1;endArrow=block;rounded=0;" target="oNoeWv3ABlER2bhzCsTN-33" value="Create Comment entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="854" y="507" />
+              <mxPoint x="854" y="537" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-44" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-33" style="curved=1;endArrow=block;rounded=0;" target="oNoeWv3ABlER2bhzCsTN-33" value="Set translations">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="854" y="593" />
+              <mxPoint x="854" y="623" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-45" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-33" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="oNoeWv3ABlER2bhzCsTN-36" value="save(comment)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1168" y="679" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-46" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-36" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="oNoeWv3ABlER2bhzCsTN-33" value="Saved Comment">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1171" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-47" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-33" style="curved=1;endArrow=block;rounded=0;" target="oNoeWv3ABlER2bhzCsTN-33" value="toCommentResponse(comment, lang)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="854" y="791" />
+              <mxPoint x="854" y="821" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oNoeWv3ABlER2bhzCsTN-48" edge="1" parent="1" source="oNoeWv3ABlER2bhzCsTN-33" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="oNoeWv3ABlER2bhzCsTN-32" value="201 CommentResponse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="609" y="877" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
