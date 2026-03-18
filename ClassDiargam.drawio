@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1" pages="4">
   <diagram name="第 1 页" id="JjErbqPxGkcp5aAP7Mwj">
-    <mxGraphModel dx="1277" dy="872" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2178" dy="1478" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -116,7 +116,7 @@
           <mxGeometry height="29" width="360" y="327.3333333333333" as="geometry" />
         </mxCell>
         <mxCell id="nruzYMmrEUJJwPm_MfWR-38" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;fontSize=17;" value="NewsController" vertex="1">
-          <mxGeometry height="264" width="658" x="422" y="656" as="geometry" />
+          <mxGeometry height="200" width="658" x="422" y="656" as="geometry" />
         </mxCell>
         <mxCell id="nruzYMmrEUJJwPm_MfWR-39" parent="nruzYMmrEUJJwPm_MfWR-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="-newsRepository: NewsRepository" vertex="1">
           <mxGeometry height="32" width="658" y="32" as="geometry" />
@@ -127,23 +127,17 @@
         <mxCell id="nruzYMmrEUJJwPm_MfWR-41" parent="nruzYMmrEUJJwPm_MfWR-38" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontSize=17;" vertex="1">
           <mxGeometry height="8" width="658" y="96" as="geometry" />
         </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-42" parent="nruzYMmrEUJJwPm_MfWR-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=16;" value="+getDailyBriefing(page, size, lang, source, startDate, endDate, keyword) :  ResponseEntity" vertex="1">
+        <mxCell id="nruzYMmrEUJJwPm_MfWR-42" parent="nruzYMmrEUJJwPm_MfWR-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=16;" value="+getDailyBriefing(page, size, lang, startDate, endDate, keyword) :  ResponseEntity" vertex="1">
           <mxGeometry height="32" width="658" y="104" as="geometry" />
         </mxCell>
         <mxCell id="nruzYMmrEUJJwPm_MfWR-43" parent="nruzYMmrEUJJwPm_MfWR-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="+getNewsDetail(id, lang) : ResponseEntity" vertex="1">
           <mxGeometry height="32" width="658" y="136" as="geometry" />
         </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-44" parent="nruzYMmrEUJJwPm_MfWR-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="+getNewsSources() :  ResponseEntity" vertex="1">
+        <mxCell id="nruzYMmrEUJJwPm_MfWR-45" parent="nruzYMmrEUJJwPm_MfWR-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="-convertToDTO(news, lang) : NewsBriefDTO" vertex="1">
           <mxGeometry height="32" width="658" y="168" as="geometry" />
         </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-45" parent="nruzYMmrEUJJwPm_MfWR-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="-convertToDTO(news, lang) : NewsBriefDTO" vertex="1">
-          <mxGeometry height="32" width="658" y="200" as="geometry" />
-        </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-46" parent="nruzYMmrEUJJwPm_MfWR-38" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="-extractOriginalMediaName(source) : String" vertex="1">
-          <mxGeometry height="32" width="658" y="232" as="geometry" />
-        </mxCell>
         <mxCell id="nruzYMmrEUJJwPm_MfWR-47" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=43;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;fontSize=17;" value="&lt;&lt;interface&gt;&gt;&#xa;NewsRepository" vertex="1">
-          <mxGeometry height="428" width="1074" x="104" y="990" as="geometry" />
+          <mxGeometry height="196" width="1074" x="104" y="990" as="geometry" />
         </mxCell>
         <mxCell id="nruzYMmrEUJJwPm_MfWR-48" parent="nruzYMmrEUJJwPm_MfWR-47" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontSize=20;" vertex="1">
           <mxGeometry height="8" width="1074" y="43" as="geometry" />
@@ -151,41 +145,17 @@
         <mxCell id="nruzYMmrEUJJwPm_MfWR-49" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByOriginalUrl(originalUrl) :  Optional&lt;News&gt;" vertex="1">
           <mxGeometry height="29" width="1074" y="51" as="geometry" />
         </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-50" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findBySource(source) : List&lt;News&gt;" vertex="1">
+        <mxCell id="nruzYMmrEUJJwPm_MfWR-53" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findTodayNews(startOfDay, endOfDay, pageable) : Page&lt;News&gt;" vertex="1">
           <mxGeometry height="29" width="1074" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-51" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findBySourceAndTitle(source, title) : Optional&lt;News&gt;" vertex="1">
+        <mxCell id="nruzYMmrEUJJwPm_MfWR-55" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByPublishDateBetweenOrdered(startDate, endDate, pageable) : Page&lt;News&gt;" vertex="1">
           <mxGeometry height="29" width="1074" y="109" as="geometry" />
         </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-52" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByCreateTimeBetween(startDate, endDate, pageable) :  Page&lt;News&gt;" vertex="1">
+        <mxCell id="nruzYMmrEUJJwPm_MfWR-57" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByKeywordAndPublishDateBetween(keyword, startDate, endDate, pageable) : Page&lt;News&gt;" vertex="1">
           <mxGeometry height="29" width="1074" y="138" as="geometry" />
         </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-53" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findTodayNews(startOfDay, endOfDay, pageable) : Page&lt;News&gt;" vertex="1">
-          <mxGeometry height="29" width="1074" y="167" as="geometry" />
-        </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-54" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findBySourceAndPublishDateBetween(source, startDate, endDate, pageable) : Page&lt;News&gt;" vertex="1">
-          <mxGeometry height="29" width="1074" y="196" as="geometry" />
-        </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-55" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByPublishDateBetweenOrdered(startDate, endDate, pageable) : Page&lt;News&gt;" vertex="1">
-          <mxGeometry height="29" width="1074" y="225" as="geometry" />
-        </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-56" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findDistinctSources() : List&lt;String&gt;" vertex="1">
-          <mxGeometry height="29" width="1074" y="254" as="geometry" />
-        </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-57" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByKeywordAndPublishDateBetween(keyword, startDate, endDate, pageable) : Page&lt;News&gt;" vertex="1">
-          <mxGeometry height="29" width="1074" y="283" as="geometry" />
-        </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-58" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByKeywordAndSourceAndPublishDateBetween(keyword, source, startDate, endDate, pageable) : Page&lt;News&gt;" vertex="1">
-          <mxGeometry height="29" width="1074" y="312" as="geometry" />
-        </mxCell>
         <mxCell id="nruzYMmrEUJJwPm_MfWR-59" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByKeyword(keyword, pageable) : Page&lt;News&gt;" vertex="1">
-          <mxGeometry height="29" width="1074" y="341" as="geometry" />
-        </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-60" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByKeywordAndSource(keyword, source, pageable) : Page&lt;News&gt;" vertex="1">
-          <mxGeometry height="29" width="1074" y="370" as="geometry" />
-        </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-61" parent="nruzYMmrEUJJwPm_MfWR-47" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findBySourceOrdered(source, pageable) : Page&lt;News&gt;" vertex="1">
-          <mxGeometry height="29" width="1074" y="399" as="geometry" />
+          <mxGeometry height="29" width="1074" y="167" as="geometry" />
         </mxCell>
         <mxCell id="nruzYMmrEUJJwPm_MfWR-62" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=27.586206896551722;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;fontSize=20;" value="News" vertex="1">
           <mxGeometry height="377.58620689655174" width="213" x="1260" y="1028" as="geometry" />
@@ -292,8 +262,10 @@
             <mxPoint x="730" y="670" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nruzYMmrEUJJwPm_MfWR-96" edge="1" parent="1" source="nruzYMmrEUJJwPm_MfWR-46" style="startArrow=none;endArrow=open;endSize=12;rounded=0;strokeWidth=2;fontSize=17;" target="nruzYMmrEUJJwPm_MfWR-47" value="uses">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="nruzYMmrEUJJwPm_MfWR-96" edge="1" parent="1" style="startArrow=none;endArrow=open;endSize=12;rounded=0;strokeWidth=2;fontSize=17;" target="nruzYMmrEUJJwPm_MfWR-47" value="uses">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="745.6987951807228" y="888.0000000000002" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="nruzYMmrEUJJwPm_MfWR-97" edge="1" parent="1" source="nruzYMmrEUJJwPm_MfWR-38" style="startArrow=none;endArrow=open;rounded=0;strokeWidth=2;fontSize=17;" target="nruzYMmrEUJJwPm_MfWR-93" value="uses">
           <mxGeometry relative="1" as="geometry" />
@@ -468,11 +440,53 @@
         <mxCell id="ILF5H7HfyjSIqIV281xV-82" parent="ILF5H7HfyjSIqIV281xV-69" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontSize=20;fontStyle=1" vertex="1">
           <mxGeometry height="14" width="233" y="335.58620689655174" as="geometry" />
         </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;fontSize=17;" value="NewsController" vertex="1">
+          <mxGeometry height="200" width="658" x="2233" y="671" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-2" parent="Pe9kA3fg5A1on0mx4eGE-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="-newsRepository: NewsRepository" vertex="1">
+          <mxGeometry height="32" width="658" y="32" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-3" parent="Pe9kA3fg5A1on0mx4eGE-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="-languageDetectionService: LanguageDetectionService" vertex="1">
+          <mxGeometry height="32" width="658" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-4" parent="Pe9kA3fg5A1on0mx4eGE-1" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontSize=17;" vertex="1">
+          <mxGeometry height="8" width="658" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-5" parent="Pe9kA3fg5A1on0mx4eGE-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=16;" value="+getDailyBriefing(page, size, lang, startDate, endDate, keyword) :  ResponseEntity" vertex="1">
+          <mxGeometry height="32" width="658" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-6" parent="Pe9kA3fg5A1on0mx4eGE-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="+getNewsDetail(id, lang) : ResponseEntity" vertex="1">
+          <mxGeometry height="32" width="658" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-7" parent="Pe9kA3fg5A1on0mx4eGE-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=17;" value="-convertToDTO(news, lang) : NewsBriefDTO" vertex="1">
+          <mxGeometry height="32" width="658" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-8" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=43;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;strokeWidth=2;fontSize=17;" value="&lt;&lt;interface&gt;&gt;&#xa;NewsRepository" vertex="1">
+          <mxGeometry height="196" width="1074" x="2122" y="1306" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-9" parent="Pe9kA3fg5A1on0mx4eGE-8" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontSize=20;" vertex="1">
+          <mxGeometry height="8" width="1074" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-10" parent="Pe9kA3fg5A1on0mx4eGE-8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByOriginalUrl(originalUrl) :  Optional&lt;News&gt;" vertex="1">
+          <mxGeometry height="29" width="1074" y="51" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-12" parent="Pe9kA3fg5A1on0mx4eGE-8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findTodayNews(startOfDay, endOfDay, pageable) : Page&lt;News&gt;" vertex="1">
+          <mxGeometry height="29" width="1074" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-13" parent="Pe9kA3fg5A1on0mx4eGE-8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByPublishDateBetweenOrdered(startDate, endDate, pageable) : Page&lt;News&gt;" vertex="1">
+          <mxGeometry height="29" width="1074" y="109" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-14" parent="Pe9kA3fg5A1on0mx4eGE-8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByKeywordAndPublishDateBetween(keyword, startDate, endDate, pageable) : Page&lt;News&gt;" vertex="1">
+          <mxGeometry height="29" width="1074" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="Pe9kA3fg5A1on0mx4eGE-15" parent="Pe9kA3fg5A1on0mx4eGE-8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=2;fontSize=20;" value="+findByKeyword(keyword, pageable) : Page&lt;News&gt;" vertex="1">
+          <mxGeometry height="29" width="1074" y="167" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="8c5RULcg1UI5fSan6Q_W" name="第 2 页">
-    <mxGraphModel dx="5192" dy="2452" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2796" dy="826" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
