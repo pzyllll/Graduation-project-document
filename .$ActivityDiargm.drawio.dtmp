@@ -6330,7 +6330,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="4NsiP3hWRlUJLElZWjwQ" name="第 15. 页">
-    <mxGraphModel dx="2000" dy="1226" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1100" dy="616" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -6400,10 +6400,10 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="vcCAaG6CIbKthgxHvRYG-24" edge="1" parent="JBmHtTI5G1I7LAzUQzN5-2" source="vcCAaG6CIbKthgxHvRYG-11" style="startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=22;" target="vcCAaG6CIbKthgxHvRYG-12" value="[Network timeout or &#xa;connection error]">
+        <mxCell id="vcCAaG6CIbKthgxHvRYG-24" edge="1" parent="JBmHtTI5G1I7LAzUQzN5-2" source="vcCAaG6CIbKthgxHvRYG-11" style="startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=22;" target="vcCAaG6CIbKthgxHvRYG-12" value="[Request Failed]">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="vcCAaG6CIbKthgxHvRYG-26" edge="1" parent="JBmHtTI5G1I7LAzUQzN5-2" source="vcCAaG6CIbKthgxHvRYG-11" style="startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=22;" target="vcCAaG6CIbKthgxHvRYG-13" value="[Network online&#xa;connect success]">
+        <mxCell id="vcCAaG6CIbKthgxHvRYG-26" edge="1" parent="JBmHtTI5G1I7LAzUQzN5-2" source="vcCAaG6CIbKthgxHvRYG-11" style="startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=22;" target="vcCAaG6CIbKthgxHvRYG-13" value="[Request Succeeded]">
           <mxGeometry relative="1" x="0.0086" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -6776,7 +6776,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="bEld8O_2AGaAYJXAKvT8" name="17">
-    <mxGraphModel dx="1046" dy="851" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="716" dy="635" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -6833,12 +6833,12 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="N5gOqG2n9TreqG51fQrH-22" edge="1" parent="G1yre1xXVd8ltB5MzfHF-2" source="N5gOqG2n9TreqG51fQrH-11" style="startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=17;" target="N5gOqG2n9TreqG51fQrH-12" value="[ Network/server&#xa;error]">
+        <mxCell id="N5gOqG2n9TreqG51fQrH-22" edge="1" parent="G1yre1xXVd8ltB5MzfHF-2" source="N5gOqG2n9TreqG51fQrH-11" style="startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=17;" target="N5gOqG2n9TreqG51fQrH-12" value="[Backend fail processes like request]">
           <mxGeometry relative="1" x="0.578" y="17" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="N5gOqG2n9TreqG51fQrH-24" edge="1" parent="G1yre1xXVd8ltB5MzfHF-2" source="N5gOqG2n9TreqG51fQrH-11" style="startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=17;" target="N5gOqG2n9TreqG51fQrH-13" value="[ Network/server connect success]">
+        <mxCell id="N5gOqG2n9TreqG51fQrH-24" edge="1" parent="G1yre1xXVd8ltB5MzfHF-2" source="N5gOqG2n9TreqG51fQrH-11" style="startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=17;" target="N5gOqG2n9TreqG51fQrH-13" value="[Backend successfully processes &#xa;like request and returns response]">
           <mxGeometry relative="1" x="0.6109" y="-4" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -6870,7 +6870,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="DiuyfyvXi9CAQ563hlKQ" name="18View the Friends/Followers list">
-    <mxGraphModel dx="1600" dy="1084" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1213" dy="828" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -7095,10 +7095,10 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5C-p58qUGb5Ro66dcOKC-29" edge="1" parent="5C-p58qUGb5Ro66dcOKC-37" source="5C-p58qUGb5Ro66dcOKC-12" style="startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=19;" target="5C-p58qUGb5Ro66dcOKC-13" value="[No users in list]">
+        <mxCell id="5C-p58qUGb5Ro66dcOKC-29" edge="1" parent="5C-p58qUGb5Ro66dcOKC-37" source="5C-p58qUGb5Ro66dcOKC-12" style="startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=19;" target="5C-p58qUGb5Ro66dcOKC-13" value="[No users]">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5C-p58qUGb5Ro66dcOKC-31" edge="1" parent="5C-p58qUGb5Ro66dcOKC-37" source="5C-p58qUGb5Ro66dcOKC-12" style="startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=19;" target="5C-p58qUGb5Ro66dcOKC-14" value="[Have user in list]">
+        <mxCell id="5C-p58qUGb5Ro66dcOKC-31" edge="1" parent="5C-p58qUGb5Ro66dcOKC-37" source="5C-p58qUGb5Ro66dcOKC-12" style="startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=3;fontStyle=1;fontSize=19;" target="5C-p58qUGb5Ro66dcOKC-14" value="[Users available]">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5C-p58qUGb5Ro66dcOKC-32" edge="1" parent="5C-p58qUGb5Ro66dcOKC-37" source="5C-p58qUGb5Ro66dcOKC-14" style="startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;strokeWidth=3;fontStyle=1;fontSize=19;" target="5C-p58qUGb5Ro66dcOKC-6" value="">
