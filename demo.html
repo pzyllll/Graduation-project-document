@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BridgeU - Minimalist Profile & Auth</title>
+    <style>
+        /* 核心重置与极简字体设置 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        /* 顶部导航栏 (默认隐藏，登录后显示) */
+        .navbar {
+            display: none; /* 初始隐藏 */
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 2px solid #000000;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .nav-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .nav-select {
+            border: 2px solid #000000;
+            padding: 4px 8px;
+            font-weight: bold;
+            background: #fff;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .nav-logout {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            cursor: pointer;
+        }
+
+        /* 主体内容容器 */
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        /* 视图切换控制 */
+        .view-section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* =========================================
+           Auth Pages (Login, Register, Reset)
+           ========================================= */
+        .auth-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 120px);
+        }
+
+        .auth-card {
+            border: 3px solid #000000;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 8px 8px 0px #000000;
+            background: #ffffff;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #000000;
+        }
+
+        .auth-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #000000;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .auth-title {
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .auth-subtitle {
+            font-size: 12px;
+            font-family: monospace;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        .auth-page-title {
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .auth-form-group {
+            margin-bottom: 20px;
+        }
+
+        .auth-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .auth-input {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border: 2px solid #000000;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .auth-input:focus {
+            background-color: #f4f4f4;
+        }
+
+        .auth-hint {
+            font-size: 11px;
+            color: #666;
+            font-family: monospace;
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+
+        /* 组合输入框 (比如：邮箱类型选择 + 输入框 + 发送验证码) */
+        .auth-input-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .auth-input-group select.auth-input {
+            width: auto;
+            flex-shrink: 0;
+            font-weight: 800;
+        }
+
+        .auth-input-group input.auth-input {
+            flex-grow: 1;
+        }
+
+        .btn-verify {
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: 0 16px;
+            font-weight: 800;
+            font-size: 12px;
+            text-transform: uppercase;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .btn-verify:hover {
+            background-color: #f0f0f0;
+        }
+
+        .btn-auth {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: 2px solid #000000;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 32px;
+            margin-bottom: 24px;
+        }
+
+        .btn-auth:hover {
+            background-color: #333;
+            box-shadow: 4px 4px 0px #000000;
+            transform: translateY(-2px);
+        }
+
+        .auth-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .auth-footer.center-right {
+            justify-content: flex-end;
+        }
+
+        .auth-link {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            cursor: pointer;
+        }
+
+        .auth-link:hover {
+            color: #555;
+        }
+
+
+        /* =========================================
+           Profile Views (从上一个版本保留下来的样式)
+           ========================================= */
+        .page-header { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; }
+        .btn-back { padding: 8px 16px; font-size: 14px; font-weight: 800; text-transform: uppercase; background-color: #ffffff; color: #000000; border: 2px solid #000000; cursor: pointer; transition: all 0.2s ease; }
+        .btn-back:hover { background-color: #f0f0f0; box-shadow: 4px 4px 0px #000000; transform: translateY(-2px); }
+        .page-title { font-size: 32px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+        .profile-box { border: 2px solid #000000; padding: 40px; display: flex; align-items: center; gap: 30px; margin-bottom: 60px; }
+        .profile-avatar { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #000000; display: flex; align-items: center; justify-content: center; font-size: 40px; font-weight: 800; flex-shrink: 0; }
+        .profile-info { flex-grow: 1; }
+        .profile-name { font-size: 28px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+        .profile-handle { font-size: 16px; color: #555555; margin-bottom: 16px; font-family: monospace; }
+        .profile-stats { display: flex; gap: 30px; margin-bottom: 24px; font-weight: 700; font-size: 14px; text-transform: uppercase; }
+        .stat-item span { font-size: 20px; font-weight: 900; margin-right: 6px; }
+        .stat-item.clickable { cursor: pointer; text-decoration: underline; text-underline-offset: 4px; transition: color 0.2s ease; }
+        .stat-item.clickable:hover { color: #555555; }
+        .profile-actions { display: flex; gap: 20px; }
+        .action-link { font-size: 12px; font-weight: 800; text-transform: uppercase; text-decoration: underline; text-underline-offset: 4px; letter-spacing: 0.5px; cursor: pointer; }
+        .action-link:hover { color: #555; }
+        .section-header { font-size: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; padding-bottom: 16px; border-bottom: 3px solid #000000; margin-bottom: 24px; }
+        .post-item { border: 2px solid #000000; padding: 24px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .post-item:hover { transform: translateY(-2px); box-shadow: 4px 4px 0px #000000; }
+        .post-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+        .post-title { font-size: 18px; font-weight: 800; text-transform: uppercase; line-height: 1.4; }
+        .post-actions { display: flex; gap: 12px; align-items: center; flex-shrink: 0; }
+        .post-excerpt { font-size: 15px; color: #333333; line-height: 1.6; }
+        .post-footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 8px; }
+        .post-meta { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #666666; font-family: monospace; text-transform: uppercase; }
+        .post-metrics { display: flex; gap: 16px; font-family: monospace; font-weight: 800; font-size: 14px; }
+        .metric-item { display: flex; align-items: center; gap: 6px; }
+        .badge { padding: 6px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; border: 2px solid #000000; }
+        .badge.published { background-color: #000000; color: #ffffff; }
+        .btn-delete { padding: 6px 12px; font-size: 12px; font-weight: 800; text-transform: uppercase; background-color: #ffffff; color: #000000; border: 2px solid #000000; cursor: pointer; }
+        .btn-delete:hover { background-color: #f0f0f0; }
+        .empty-state { border: 2px dashed #000000; padding: 80px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 40px; }
+        .empty-icon { font-size: 64px; margin-bottom: 24px; line-height: 1; }
+        .empty-text { font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: #555555; }
+
+        /* Modal Styles */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.2s ease, visibility 0.2s ease; }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-content { background-color: #ffffff; border: 3px solid #000000; padding: 40px; width: 100%; max-width: 600px; box-shadow: 8px 8px 0px #000000; transform: translateY(20px); transition: transform 0.2s ease; }
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #000000; margin-bottom: 24px; padding-bottom: 12px; }
+        .modal-title { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 0; }
+        .btn-close { background: transparent; border: 2px solid #000000; color: #000000; font-size: 16px; font-weight: 900; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease; }
+        .btn-close:hover { background: #000000; color: #ffffff; }
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; }
+        .form-input { width: 100%; padding: 12px; font-size: 16px; font-family: inherit; border: 2px solid #000000; outline: none; transition: background-color 0.2s ease; }
+        .form-input:focus { background-color: #f4f4f4; }
+        .avatar-group .avatar-upload-wrapper { display: flex; align-items: center; gap: 24px; }
+        .avatar-upload-preview { width: 90px; height: 90px; border-radius: 50%; border: 2px solid #000000; display: flex; align-items: center; justify-content: center; font-size: 36px; font-weight: 800; flex-shrink: 0; overflow: hidden; }
+        .avatar-upload-preview.has-image { background: linear-gradient(135deg, #1f4037 0%, #99f2c8 100%); color: #ffffff; }
+        .avatar-upload-controls { flex-grow: 1; }
+        .btn-upload { display: block; width: 100%; padding: 12px; background-color: #f0f0f0; color: #000000; font-weight: 800; font-size: 14px; cursor: pointer; border: 2px solid #000000; text-transform: uppercase; text-align: center; margin-bottom: 8px; }
+        .btn-upload:hover { background-color: #e0e0e0; }
+        .upload-hint { font-size: 12px; color: #666666; font-family: monospace; }
+        .modal-actions { display: flex; gap: 16px; margin-top: 32px; }
+        .btn-modal { padding: 10px 24px; font-size: 14px; font-weight: 800; text-transform: uppercase; cursor: pointer; border: 2px solid #000000; transition: all 0.2s ease; }
+        .btn-save { background-color: #000000; color: #ffffff; }
+        .btn-save:hover { background-color: #333333; box-shadow: 2px 2px 0px #000; }
+        .btn-cancel { background-color: #ffffff; color: #000000; }
+        .btn-cancel:hover { background-color: #f0f0f0; box-shadow: 2px 2px 0px #000; }
+
+        .user-list { display: flex; flex-direction: column; max-height: 400px; overflow-y: auto; }
+        .user-item { display: flex; align-items: center; gap: 16px; padding: 16px 12px; border-bottom: 2px solid #f0f0f0; cursor: pointer; transition: background-color 0.2s ease; }
+        .user-item:last-child { border-bottom: none; }
+        .user-item:hover { background-color: #f9f9f9; }
+        .user-avatar { width: 48px; height: 48px; border-radius: 50%; border: 2px solid #000000; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; flex-shrink: 0; }
+        .user-avatar.bg-1 { background-color: #e2e8f0; }
+        .user-avatar.bg-2 { background-color: #bfdbfe; }
+        .user-info { display: flex; flex-direction: column; gap: 4px; }
+        .user-name { font-size: 16px; font-weight: 800; text-transform: uppercase; }
+        .user-handle { font-size: 14px; font-family: monospace; color: #666666; }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .profile-box { flex-direction: column; align-items: flex-start; gap: 20px; }
+            .post-header { flex-direction: column; gap: 12px; }
+            .post-footer { flex-direction: column; align-items: flex-start; gap: 16px; }
+            .auth-input-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航栏 (登录后才显示) -->
+    <header class="navbar" id="main-navbar">
+        <div class="nav-logo">BridgeU</div>
+        <div class="nav-links">
+            <a href="#">Briefing</a>
+            <a href="#">Community</a>
+            <a href="#">Connect</a>
+            <div class="nav-avatar">P</div>
+            <select class="nav-select">
+                <option>English</option>
+                <option>Chinese</option>
+            </select>
+            <a class="nav-logout" id="btn-logout">Log Out</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- =========================================
+             VIEW 0.1: 登录页 (Login)
+             ========================================= -->
+        <div id="view-login" class="view-section active">
+            <div class="auth-wrapper">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <div class="auth-logo">🌐</div>
+                        <h1 class="auth-title">BridgeU</h1>
+                        <div class="auth-subtitle">Connecting Students & Local Life</div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">USERNAME / EMAIL / PHONE NUMBER</label>
+                        <input type="text" class="auth-input" placeholder="USERNAME / EMAIL / PHONE NUMBER">
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">PASSWORD</label>
+                        <input type="password" class="auth-input" placeholder="PASSWORD">
+                    </div>
+
+                    <button class="btn-auth" id="btn-do-login">LOGIN</button>
+
+                    <div class="auth-footer">
+                        <a class="auth-link" id="link-to-register">Create an account</a>
+                        <a class="auth-link" id="link-to-reset">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================
+             VIEW 0.2: 注册页 (Complete Registration)
+             ========================================= -->
+        <div id="view-register" class="view-section">
+            <div class="auth-wrapper">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <div class="auth-logo">🌐</div>
+                        <h1 class="auth-title">BridgeU</h1>
+                        <div class="auth-subtitle">Connecting Students & Local Life</div>
+                    </div>
+
+                    <h2 class="auth-page-title">COMPLETE REGISTRATION</h2>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">EMAIL OR PHONE</label>
+                        <div class="auth-input-group">
+                            <select class="auth-input">
+                                <option>Email</option>
+                                <option>Phone</option>
+                            </select>
+                            <input type="text" class="auth-input" placeholder="Enter your email address">
+                            <button class="btn-verify">SEND CODE</button>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">USERNAME</label>
+                        <input type="text" class="auth-input" placeholder="USERNAME">
+                        <div class="auth-hint">Username must be English characters only</div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">PASSWORD</label>
+                        <input type="password" class="auth-input" placeholder="PASSWORD">
+                        <div class="auth-hint">Password must contain both uppercase and lowercase letters and be at least 6 characters</div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">CONFIRM PASSWORD</label>
+                        <input type="password" class="auth-input" placeholder="CONFIRM PASSWORD">
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">PREFERRED LANGUAGE</label>
+                        <select class="auth-input">
+                            <option>English</option>
+                            <option>Chinese</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-auth" id="btn-do-register">REGISTER</button>
+
+                    <div class="auth-footer center-right">
+                        <a class="auth-link btn-back-to-login">Back to Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================
+             VIEW 0.3: 重置密码页 (Reset Password)
+             ========================================= -->
+        <div id="view-reset" class="view-section">
+            <div class="auth-wrapper">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <div class="auth-logo">🌐</div>
+                        <h1 class="auth-title">BridgeU</h1>
+                        <div class="auth-subtitle">Connecting Students & Local Life</div>
+                    </div>
+
+                    <h2 class="auth-page-title">RESET PASSWORD</h2>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">EMAIL OR PHONE</label>
+                        <div class="auth-input-group">
+                            <select class="auth-input">
+                                <option>Email</option>
+                                <option>Phone</option>
+                            </select>
+                            <input type="text" class="auth-input" placeholder="Enter your email address">
+                            <button class="btn-verify">SEND CODE</button>
+                        </div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">NEW PASSWORD</label>
+                        <input type="password" class="auth-input" placeholder="NEW PASSWORD">
+                        <div class="auth-hint">Password must contain both uppercase and lowercase letters and be at least 6 characters</div>
+                    </div>
+
+                    <div class="auth-form-group">
+                        <label class="auth-label">CONFIRM NEW PASSWORD</label>
+                        <input type="password" class="auth-input" placeholder="CONFIRM NEW PASSWORD">
+                    </div>
+
+                    <button class="btn-auth">RESET PASSWORD</button>
+
+                    <div class="auth-footer center-right">
+                        <a class="auth-link btn-back-to-login">Back to Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================
+             VIEW 1: 主个人主页 (登录后显示)
+             ========================================= -->
+        <div id="view-profile" class="view-section">
+            <!-- 个人信息卡片 -->
+            <section class="profile-box">
+                <div class="profile-avatar">P</div>
+                <div class="profile-info">
+                    <h1 class="profile-name">PZYLLL</h1>
+                    <div class="profile-handle">@pzylll</div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item"><span>3</span> POSTS</div>
+                        <div class="stat-item clickable" id="btn-followers"><span>2</span> FOLLOWERS</div>
+                        <div class="stat-item clickable" id="btn-friends"><span>1</span> FRIENDS</div>
+                    </div>
+
+                    <div class="profile-actions">
+                        <a class="action-link" id="btn-open-edit">EDIT PROFILE</a>
+                        <a class="action-link" id="btn-go-posts">MY COMMUNITY POSTS</a>
+                        <a class="action-link" id="btn-go-reports">VIEW MY REPORTS</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 简略版帖子区块 -->
+            <section class="activity-section">
+                <h2 class="section-header">RECENT POSTS</h2>
+                <!-- 简略卡片1 -->
+                <article class="post-item">
+                    <div class="post-header">
+                        <h3 class="post-title">SHORT-TERM RENTAL TRANSFER: ONE-BEDROOM...</h3>
+                        <div class="post-actions">
+                            <div class="badge published">PUBLISHED</div>
+                        </div>
+                    </div>
+                </article>
+                <!-- 简略卡片2 -->
+                <article class="post-item">
+                    <div class="post-header">
+                        <h3 class="post-title">SEEKING CMU MASTER OF SOFTWARE ENGINEERING...</h3>
+                        <div class="post-actions">
+                            <div class="badge published">PUBLISHED</div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <!-- =========================================
+             VIEW 2: 我的社区帖子 (详细列表)
+             ========================================= -->
+        <div id="view-my-posts" class="view-section">
+            <div class="page-header">
+                <button class="btn-back">← BACK</button>
+                <h1 class="page-title">MY COMMUNITY POSTS</h1>
+            </div>
+
+            <div class="posts-list">
+                <!-- 帖子 1 -->
+                <article class="post-item">
+                    <div class="post-header">
+                        <h3 class="post-title">SHORT-TERM RENTAL TRANSFER: ONE-BEDROOM, ONE-LIVING-ROOM APARTMENT NEAR PHCOME HOTEL</h3>
+                        <div class="post-actions">
+                            <div class="badge published">PUBLISHED</div>
+                            <button class="btn-delete">DELETE POST</button>
+                        </div>
+                    </div>
+                    <p class="post-excerpt">
+                        Due to a change in personal schedule, I need to sublet an apartment near PHCOME Hotel. Two months remain on the lease. Fully furnished, fast internet, very close to campus, and there's a 7-Eleven righ...
+                    </p>
+                    <div class="post-footer">
+                        <div class="post-meta">
+                            <span>2026-03-15 17:13</span>
+                            <span>REVIEWED AT: 2026-03-15 17:13</span>
+                        </div>
+                        <div class="post-metrics">
+                            <div class="metric-item">♥ 0</div>
+                            <div class="metric-item">💬 0</div>
+                        </div>
+                    </div>
+                </article>
+                <!-- 帖子 2 -->
+                <article class="post-item">
+                    <div class="post-header">
+                        <h3 class="post-title">SEEKING CMU MASTER OF SOFTWARE ENGINEERING (MSE) INTERVIEW EXPERIENCE</h3>
+                        <div class="post-actions">
+                            <div class="badge published">PUBLISHED</div>
+                            <button class="btn-delete">DELETE POST</button>
+                        </div>
+                    </div>
+                    <p class="post-excerpt">
+                        Just received the interview notification for this year's Master's in Software Engineering at Chiang Mai University. I'd like to ask seniors who've gone through the program before: what kinds of techni...
+                    </p>
+                    <div class="post-footer">
+                        <div class="post-meta">
+                            <span>2026-03-15 17:12</span>
+                            <span>REVIEWED AT: 2026-03-15 17:12</span>
+                        </div>
+                        <div class="post-metrics">
+                            <div class="metric-item">♥ 0</div>
+                            <div class="metric-item">💬 0</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- =========================================
+             VIEW 3: 我的举报记录 (空状态)
+             ========================================= -->
+        <div id="view-my-reports" class="view-section">
+            <div class="page-header">
+                <button class="btn-back">← BACK</button>
+                <h1 class="page-title">MY REPORTS</h1>
+            </div>
+
+            <div class="empty-state">
+                <div class="empty-icon">📋</div>
+                <div class="empty-text">YOU HAVE NOT SUBMITTED ANY REPORTS YET.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- =========================================
+         Edit Profile Modal 结构
+         ========================================= -->
+    <div class="modal-overlay" id="editProfileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">EDIT PROFILE</h2>
+            </div>
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label for="displayName">DISPLAY NAME</label>
+                    <input type="text" id="displayName" class="form-input" value="pzylll">
+                </div>
+
+                <div class="form-group avatar-group">
+                    <label>AVATAR URL</label>
+                    <div class="avatar-upload-wrapper">
+                        <div class="avatar-upload-preview has-image">P</div>
+                        <div class="avatar-upload-controls">
+                            <label for="avatarInput" class="btn-upload">myProfile.selectImage</label>
+                            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                            <div class="upload-hint">myProfile.avatarUploadHint</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="prefLanguage">PREFERRED LANGUAGE</label>
+                    <select id="prefLanguage" class="form-input">
+                        <option value="en" selected>English</option>
+                        <option value="zh">Chinese</option>
+                    </select>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="submit" class="btn-modal btn-save">SAVE</button>
+                    <button type="button" class="btn-modal btn-cancel" id="closeModalBtn">CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- =========================================
+         User List Modal 结构 (Followers/Friends)
+         ========================================= -->
+    <div class="modal-overlay" id="listModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="listModalTitle">FOLLOWERS</h2>
+                <button class="btn-close" id="closeListModalBtn">X</button>
+            </div>
+            
+            <div class="user-list">
+                <div class="user-item">
+                    <div class="user-avatar bg-1">H</div>
+                    <div class="user-info">
+                        <div class="user-name">HE</div>
+                        <div class="user-handle">@he</div>
+                    </div>
+                </div>
+                <div class="user-item">
+                    <div class="user-avatar bg-2">L</div>
+                    <div class="user-info">
+                        <div class="user-name">LGH</div>
+                        <div class="user-handle">@lgh</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 交互逻辑脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 核心 DOM 节点 ---
+            const mainNavbar = document.getElementById('main-navbar');
+            
+            // 视图
+            const viewLogin = document.getElementById('view-login');
+            const viewRegister = document.getElementById('view-register');
+            const viewReset = document.getElementById('view-reset');
+            const viewProfile = document.getElementById('view-profile');
+            const viewMyPosts = document.getElementById('view-my-posts');
+            const viewMyReports = document.getElementById('view-my-reports');
+            
+            // 按钮与链接
+            const linkToRegister = document.getElementById('link-to-register');
+            const linkToReset = document.getElementById('link-to-reset');
+            const btnsBackToLogin = document.querySelectorAll('.btn-back-to-login');
+            
+            const btnDoLogin = document.getElementById('btn-do-login');
+            const btnDoRegister = document.getElementById('btn-do-register');
+            const btnLogout = document.getElementById('btn-logout');
+
+            const btnGoPosts = document.getElementById('btn-go-posts');
+            const btnGoReports = document.getElementById('btn-go-reports');
+            const btnsBackToProfile = document.querySelectorAll('.btn-back');
+
+            // --- 统一的视图切换函数 ---
+            function switchView(targetView) {
+                // 隐藏所有视图
+                document.querySelectorAll('.view-section').forEach(view => {
+                    view.classList.remove('active');
+                });
+                
+                // 显示目标视图
+                targetView.classList.add('active');
+
+                // 如果是认证页面 (Login/Register/Reset)，隐藏主导航栏
+                if (targetView === viewLogin || targetView === viewRegister || targetView === viewReset) {
+                    mainNavbar.style.display = 'none';
+                } else {
+                    mainNavbar.style.display = 'flex';
+                }
+            }
+
+            // 初始化：确保护航栏状态与首屏一致 (首屏为 Login)
+            switchView(viewLogin);
+
+            // --- 认证流程导航 (Auth Navigation) ---
+            linkToRegister.addEventListener('click', () => switchView(viewRegister));
+            linkToReset.addEventListener('click', () => switchView(viewReset));
+            btnsBackToLogin.forEach(btn => {
+                btn.addEventListener('click', () => switchView(viewLogin));
+            });
+
+            // 模拟登录/注册成功 -> 跳转主页
+            btnDoLogin.addEventListener('click', () => switchView(viewProfile));
+            btnDoRegister.addEventListener('click', () => switchView(viewProfile));
+
+            // 模拟登出 -> 回到登录页
+            btnLogout.addEventListener('click', () => switchView(viewLogin));
+
+
+            // --- 主页内部导航 (Profile Navigation) ---
+            btnGoPosts.addEventListener('click', () => switchView(viewMyPosts));
+            btnGoReports.addEventListener('click', () => switchView(viewMyReports));
+            btnsBackToProfile.forEach(btn => {
+                btn.addEventListener('click', () => switchView(viewProfile));
+            });
+
+
+            // --- 资料编辑弹窗逻辑 (Edit Profile Modal) ---
+            const editProfileBtn = document.getElementById('btn-open-edit');
+            const editModal = document.getElementById('editProfileModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const editProfileForm = document.getElementById('editProfileForm');
+
+            editProfileBtn.addEventListener('click', () => editModal.classList.add('active'));
+            closeModalBtn.addEventListener('click', () => editModal.classList.remove('active'));
+            editModal.addEventListener('click', (e) => {
+                if (e.target === editModal) editModal.classList.remove('active');
+            });
+            editProfileForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const newName = document.getElementById('displayName').value;
+                alert('PROFILE SAVED!\nNew Display Name: ' + newName);
+                editModal.classList.remove('active');
+            });
+
+
+            // --- Followers / Friends 列表弹窗逻辑 ---
+            const listModal = document.getElementById('listModal');
+            const listModalTitle = document.getElementById('listModalTitle');
+            const closeListModalBtn = document.getElementById('closeListModalBtn');
+            const btnFollowers = document.getElementById('btn-followers');
+            const btnFriends = document.getElementById('btn-friends');
+
+            btnFollowers.addEventListener('click', () => {
+                listModalTitle.textContent = 'FOLLOWERS';
+                listModal.classList.add('active');
+            });
+            btnFriends.addEventListener('click', () => {
+                listModalTitle.textContent = 'FRIENDS';
+                listModal.classList.add('active');
+            });
+            closeListModalBtn.addEventListener('click', () => listModal.classList.remove('active'));
+            listModal.addEventListener('click', (e) => {
+                if (e.target === listModal) listModal.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
